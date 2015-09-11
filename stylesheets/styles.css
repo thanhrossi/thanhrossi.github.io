@@ -305,6 +305,9 @@ screen and (max-width: 480px) {
     position: relative;
     display: inline-block;
 }
+.portfolio li img{
+    width: 100%;
+}
 .portfolio li a:hover >span.caption{
     opacity: 1;
 }
