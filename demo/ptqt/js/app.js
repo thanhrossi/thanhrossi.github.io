@@ -1,5 +1,5 @@
 
-$(document).$(function() {
+$(document).ready(function() {
 	$(document).foundation();
 	// preload
 	$(window).load(function() {
