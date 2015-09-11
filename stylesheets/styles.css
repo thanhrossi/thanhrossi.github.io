@@ -333,4 +333,8 @@ screen and (max-width: 720px) {
     .portfolio li{
         width: 44%;
     }
+    span.caption h4{
+        margin: 2px 0;
+    }
+
 }
