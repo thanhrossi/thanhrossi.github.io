@@ -355,3 +355,7 @@ screen and (max-width: 720px) {
     }
 
 }
+/*Info block*/
+.info{
+    padding: 0 15px;
+}
