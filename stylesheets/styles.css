@@ -294,29 +294,45 @@ screen and (max-width: 480px) {
 /*Portfoilo css*/
 .portfolio {
     padding: 0;
+    list-style: none;
+    font-size: 0px;
+    margin-left: -2.5%;
 }
 .portfolio li{
-    list-style: none;
-    width: 30%;
+    font-size: 16px;
+    font-size: rem;
+    margin: 0 0 2.5% 2.5%;
+    width: 30.83%;
     display: inline-block;
-    margin: 5px;
+
 }
 .portfolio li a{
     position: relative;
     display: inline-block;
     width: 100%;
+    overflow: hidden;
+}
+.portfolio li img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
 }
 .portfolio li a:hover >span.caption{
-    opacity: 1;
+    /*opacity: 1;*/
+    top: 0;
 }
+
 .portfolio li span.caption{
+
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.8);
-    top: 0;
+    top: -100%;
     bottom: 0;
-    opacity: 0;
+    /*opacity: 0;*/
     display: block;
     text-align: center;
     transition: all 0.3s cubic-bezier(0.46, 0.03, 0.52, 0.96);
@@ -330,8 +346,9 @@ span.caption p{
 }
 @media print,
 screen and (max-width: 720px) {
+
     .portfolio li{
-        width: 44%;
+        width: 47.5%;
     }
     span.caption h4{
         margin: 2px 0;
