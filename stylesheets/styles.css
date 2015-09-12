@@ -4,7 +4,7 @@ body {
     font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #f5f5f5;
     font-weight: 300;
-    background: url(http://i.imgur.com/HZOABkO.jpg) no-repeat;
+    background: url(http://i.imgur.com/HZOABkO.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 .preload {
