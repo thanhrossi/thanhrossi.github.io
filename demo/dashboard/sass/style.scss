@@ -1,0 +1,430 @@
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Nunito:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+// Imports
+@import "compass";
+@import "partials/typography";
+// @import "partials/buttons";
+@import "partials/colors";
+@import "partials/layout";
+/* ==========================================================================
+Mixins
+========================================================================== */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin circle($val){
+  width: $val;
+  height: $val;
+  @include border-radius(50%);
+}
+/* ==========================================================================
+Global Styles
+========================================================================== */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.no-padding {
+  padding: 0;
+}
+.no-margin {
+  margin: 0;
+}
+.circle-62{
+  @include circle(62px);
+}
+.circle-31{
+  @include circle(31px);
+}
+.circle-19{
+  @include circle(19px);
+}
+.circle-90{
+  @include circle(90px);
+}
+.circle-45{
+  @include circle(45px);
+}
+a {
+  color: $txt-menu;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-property: color, border-color, background-color;
+  transition-property: color, border-color, background-color;
+}
+a:hover, a:focus {
+  color: $txt-menu-hover;
+  text-decoration: none;
+}
+body {
+  font-family: $sans-serif;
+  font-weight: $light;
+  color: $txt;
+  -webkit-text-size-adjust: 100%;
+  //fix for iOS
+  background: url(../images/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  margin: 50px auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+/* ==========================================================================
+Header
+========================================================================== */
+.header{
+  background: $base-dark;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  padding: 20px 0;
+  .logo {
+    display: inline-block;
+    background: $base;
+    text-align: center;
+    // padding: 20px 21px;
+    // border-top-left-radius: 5px;
+    position: relative;
+    &:after,&:before{
+      content: "";
+      display: block;
+      position: absolute;
+      background: $base;
+      left: 0;
+      width: 100%;
+      height: 20px;
+    }
+    &:before {
+      top: -20px;
+      border-top-left-radius: 5px;
+    }
+    &:after{
+      bottom: -20px;
+    }
+    a {
+      display: inline-block;
+      text-align: center;
+      img{
+        width: 50%;
+      }
+    }
+
+  }
+  .top-menu {
+    display: inline-block;
+    @media (max-width: $md) {
+      display: block;
+    }
+    ul{
+      padding: 5px 0;
+      li{
+        display: inline;
+        padding: 0 20px;
+        @media (max-width: $md) {
+          display: block;
+          padding: 14px 0;
+          border-bottom: 1px solid #303030;
+        }
+        a{
+          @media (max-width: $md) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .search{
+    position: absolute;
+    width: 250px;
+    height: 36px;
+    top: 50%;
+    margin-top: -18px;
+    right: 170px;
+    @media (max-width: $md) {
+      position: static;
+      width: 100%;
+      margin: 20px 0;
+      margin-top: 0;
+    }
+    form{
+      position: relative;
+      input[type="text"] {
+        background: $search-bg;
+        border: none;
+        padding: 8px;
+        padding-left: 30px;
+        outline: none;
+        width: 250px;
+        color: $txt-menu-hover;
+        @include border-radius(5px);
+        @media (max-width: $md) {
+          width: 100%;
+        }
+      }
+      .search-icon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: url(../images/search-icon.png) no-repeat center center;
+        background-size: 20px auto;
+        top: 8px;
+        left: 5px;
+      }
+    }
+  }
+
+  .user{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: $base;
+    padding: 20px 12px;
+    border-top-right-radius: 5px;
+    @media (max-width: $md) {
+      position: static;
+      padding: 0;
+      background: none;
+    }
+    .avatar{
+      position: relative;
+      display: inline-block;
+      margin-right: 15px;
+      .notice{
+        position: absolute;
+        background: $orange;
+        text-align: center;
+        color: #fff;
+        top: -3px;
+        right: -6px;
+      }
+    }
+    .user-link {
+      display: inline-block;
+      background: url(../images/arrow.png) no-repeat right center;
+      background-size: 9px auto;
+      padding-right: 15px;
+    }
+  }
+}
+/* ==========================================================================
+Content
+========================================================================== */
+.content {
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  .side-menu {
+    // height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: $green;
+    @media (max-width: $md) {
+      height: 100%;
+      width: 100%;
+    }
+    ul{
+      text-align: center;
+      li {
+        @media (max-width: $md) {
+          display: inline;
+        }
+        a{
+          display: inline-block;
+          text-indent: 999999px;
+          background-size: 50% auto;
+          padding: 30px 0;
+          position: relative;
+          min-width: 25px;
+          @media (max-width: $md) {
+            padding: 30px 20px;
+          }
+          &.actived {
+            &:after{
+              content: "";
+              display: block;
+              position: absolute;
+              border-top: 10px solid transparent;
+              border-right: 10px solid #fff;
+              border-bottom: 10px solid transparent;
+              right: -38px;
+              top: 19px;
+              @media (max-width: $md) {
+                display: none;
+              }
+            }
+          }
+          &:hover {
+            &:after{
+              content: "";
+              display: block;
+              position: absolute;
+              border-top: 10px solid transparent;
+              border-right: 10px solid #fff;
+              border-bottom: 10px solid transparent;
+              right: -38px;
+              top: 19px;
+              @media (max-width: $md) {
+                display: none;
+              }
+            }
+          }
+          &.icons-calendar{
+            background: url(../images/icons/calendar.png) no-repeat center center;
+            width: 25px;
+            height: 25px;
+            background-size: 25px auto;
+          }
+          &.icons-comments{
+            background: url(../images/icons/comments.png) no-repeat center center;
+            width: 30px;
+            height: 26px;
+            background-size: 30px auto;
+          }
+          &.icons-dashboard{
+            background: url(../images/icons/dashboard.png) no-repeat center center;
+            width: 25px;
+            height: 25px;
+            background-size: 25px auto;
+          }
+          &.icons-graph {
+            background: url(../images/icons/graph.png) no-repeat center center;
+            width: 25px;
+            height: 25px;
+            background-size: 25px auto;
+          }
+          &.icons-notes{
+            background: url(../images/icons/notes.png) no-repeat center center;
+            width: 20px;
+            height: 25px;
+            background-size: 20px auto;
+          }
+          &.icons-profiles {
+            background: url(../images/icons/profile.png) no-repeat center center;
+            width: 19px;
+            height: 27px;
+            background-size: 19px auto;
+          }
+          &.icons-writes {
+            background: url(../images/icons/write.png) no-repeat center center;
+            width: 25px;
+            height: 26px;
+            background-size: 25px auto;
+          }
+          // @include all-icons-sprites;
+        }
+      }
+    }
+  }
+
+  .dashboard {
+    .section-block {
+      padding: $section-padding;
+    }
+    .main-title {
+      margin-top: 20px;
+      .setting-icon {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        background: url(../images/setting.png) no-repeat;
+        background-size: 13px auto;
+      }
+    }
+    .statics {
+      .static-item {
+        border-left: 3px solid $green;
+        padding: 0 12px;
+        &.indigo {
+          border-color: $indigo;
+        }
+        &.orange {
+          border-color: $orange;
+        }
+      }
+    }
+
+
+    .recent-players {
+      .user-item {
+        .user-avatar {
+          display: inline-block;
+          float: left;
+          padding-right: 10px;
+        }
+      }
+    }
+    
+  }
+}
+/* ==========================================================================
+Animations
+========================================================================== */
+.pulse2 {
+  animation-name: pulse2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes pulse2 {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.floating-arrow {
+  animation-name: floating-arrow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes floating-arrow {
+  from {
+    transform: translate(-50%, 0)
+  }
+  65% {
+    transform: translate(-50%, 15px)
+  }
+  to {
+    transform: translate(-50%, 0)
+  }
+}
+.floating-logo {
+  animation-name: floating-logo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes floating-logo {
+  from {
+    transform: translate(-50%, 0)
+  }
+  50% {
+    transform: translate(-50%, 10px)
+  }
+  to {
+    transform: translate(-50%, 0)
+  }
+}
+

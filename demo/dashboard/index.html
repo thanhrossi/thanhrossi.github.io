@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" media="screen, projection" href="css/screen.css">
+    <link rel="stylesheet" media="print" href="css/print.css">
+    <!--[if IE]>
+    <link rel="stylesheet" media="screen, projection" href="css/ie.css">
+    <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+        <div class="header row">
+            <div class="logo col-md-1">
+            	<a href="" ><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="left-nav">
+            	<div class="top-menu">
+	            	<nav>
+		                <ul>
+		                    <li><a href="#">+ Add user</a></li>
+		                    <li><a href="#">User Preferences</a></li>
+		                    <li><a href="#">Settings</a></li>
+		                </ul>
+		            </nav>	
+	            </div>
+	            <div class="search">
+	            	<form action="#">
+		                <div class="search-icon"></div>
+		                <input type="text" placeholder="Search">
+		            </form>
+	            </div>
+	            
+	            <div class="user">
+	                <a href="#" class="avatar">
+	                    <img src="images/avatar.jpg" class="circle-31" alt="avatar">
+	                    <i class="notice circle-19">1</i>
+	                </a>
+	                <a href="#" class="user-link">Thanh Tran</a>
+	            </div>
+
+            </div>
+            <a href="#" class="mobile-nav"><span></span>
+            <span></span>
+            <span></span></a>
+            
+            
+        </div>
+        <div class="clearfix"></div>
+        <div class="content row">
+            <aside class="side-menu col-md-1">
+                <ul>
+                    <li><a href="#" title="Dashboard" class="icons-dashboard actived">dashboard</a></li>
+                    <li><a href="#" title="Profiles" class="icons-profiles">profiles</a></li>
+                    <li><a href="#" title="Write" class="icons-writes">write</a></li>
+                    <li><a href="#" title="Calendar" class="icons-calendar">Calendar</a></li>
+                    <li><a href="#" title="Notes" class="icons-notes">notes</a></li>
+                    <li><a href="#" title="Comments" class="icons-comments">comments</a></li>
+                    <li><a href="#" title="Graphs" class="icons-graph">graphs</a></li>
+
+                </ul>
+            </aside>
+            <div class="dashboard col-md-11">
+                <div class="main-title">
+                    <h4>Dashboard <span class="setting-icon"></span></h4>
+                </div>
+                <!-- Statics -->
+                <div class="statics">
+                    <div class="row section-block">
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        	<div class="static-item">
+                        		<h2>267</h2>
+                            	<h5>Online player</h5>
+                        	</div> 
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        	<div class="static-item">
+                        		<h2>12312</h2>
+                            	<h5>Hours player</h5>
+                        	</div> 
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        	<div class="static-item indigo">
+                        		<h2>12</h2>
+                            	<h5>New tournaments</h5>
+                        	</div> 
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        	<div class="static-item">
+                        		<h2>123</h2>
+                            	<h5>Life time fails</h5>
+                        	</div> 
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        	<div class="static-item">
+                        		<h2>112</h2>
+                            	<h5>Comments</h5>
+                        	</div> 
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-xs-6">
+                        	<div class="static-item orange">
+                        		<h2>112</h2>
+                            	<h5>Game played</h5>
+                        	</div> 
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- End statics -->
+                <div class="statics-bellow row section-block">
+                    <div class="col-md-6">
+                        <div class="active-players">
+                            <h4 class="title">Active players</h4>
+                            <div class="active-player-chart"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="active-tournaments">
+                            <h4 class="title">Active tournaments</h4>
+                            <div class="active-tournament-chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row section-block">
+                    <div class="col-md-6">
+                        <div class="recent-players">
+                            <div class="row">
+                            	<div class="col-md-12">
+                            		<h4>Recent player</h4>
+                            	</div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="user-item">
+                                        <a href="#" class="user-avatar"><img src="images/user1.png" alt="User1" class="circle-45"></a>
+                                        <div class="user-content">
+                                            <h4>
+    											<a href="#">User1</a>
+    											<h5>Dess1</h5>
+    										</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="user-item">
+                                        <a href="#" class="user-avatar"><img src="images/user2.png" alt="User2" class="circle-45"></a>
+                                        <div class="user-content">
+                                            <h4>
+    											<a href="#">User2</a>
+    											<h5>Dess2</h5>
+    										</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="user-item">
+                                        <a href="#" class="user-avatar"><img src="images/user3.png" alt="User3" class="circle-45"></a>
+                                        <div class="user-content">
+                                            <h4>
+    											<a href="#">User3</a>
+    											<h5>Dess3</h5>
+    										</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="user-item">
+                                        <a href="#" class="user-avatar"><img src="images/user4.png" alt="User4" class="circle-45"></a>
+                                        <div class="user-content">
+                                            <h4>
+    											<a href="#">User4</a>
+    											<h5>Dess4</h5>
+    										</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="user-item">
+                                        <a href="#" class="user-avatar"><img src="images/user5.png" alt="User5" class="circle-45"></a>
+                                        <div class="user-content">
+                                            <h4>
+    											<a href="#">User5</a>
+    											<h5>Dess5</h5>
+    										</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="user-item">
+                                        <a href="#" class="user-avatar"><img src="images/user6.png" alt="User6" class="circle-45"></a>
+                                        <div class="user-content">
+                                            <h4>
+    											<a href="#">User6</a>
+    											<h5>Dess6</h5>
+    										</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="user-item">
+                                        <a href="#" class="user-avatar"><img src="images/user7.png" alt="User7" class="circle-45"></a>
+                                        <div class="user-content">
+                                            <h4>
+    											<a href="#">User7</a>
+    											<h5>Dess7</h5>
+    										</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="user-item">
+                                        <a href="#" class="user-avatar"><img src="images/user8.png" alt="User8" class="circle-45"></a>
+                                        <div class="user-content">
+                                            <h4>
+    											<a href="#">User8</a>
+    											<h5>Dess8</h5>
+    										</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                    <div class="user-item">
+                                        <a href="#" class="user-avatar"><img src="images/user9.png" alt="User9" class="circle-45"></a>
+                                        <div class="user-content">
+                                            <h4>
+    											<a href="#">User9</a>
+    											<h5>Dess9</h5>
+    										</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="play-statics">
+                            <div class="row">
+                            	<div class="col-md-12">
+                            		<h4>Play statics</h4>
+                            	</div>
+                            	
+                                <div class="col-md-3 col-sm-6 col-xs-6">
+                                    <div class="new-player-chart"></div>
+                                    <h4 class="title text-center">New player</h4>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-xs-6">
+                                    <div class="revisited-chart"></div>
+                                    <h4 class="title text-center">Revisited</h4>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-xs-6">
+                                    <div class="commented-chart"></div>
+                                    <h4 class="title text-center">Commented</h4>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-xs-6">
+                                    <div class="actived-player-chart"></div>
+                                    <h4 class="title text-center">Active player</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
