@@ -177,7 +177,8 @@ a {
   transition-property: color, border-color, background-color;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #d7dade;
   text-decoration: none;
 }
@@ -187,14 +188,19 @@ body {
   font-weight: 300;
   color: #5f6068;
   -webkit-text-size-adjust: 100%;
-  background: url(../images/bg.jpg) no-repeat center center fixed;
+  background-color: transparent;
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   margin: 50px auto;
   overflow-x: hidden;
   transition: all 0.3s ease-in-out;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
@@ -358,6 +364,7 @@ Content
   background: #fff;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 .content .side-menu {
   display: flex;
@@ -490,6 +497,12 @@ Content
   display: inline-block;
   float: left;
   padding-right: 10px;
+}
+.content .design {
+  position: absolute;
+  bottom: -33px;
+  right: 45px;
+  color: #D1D1D1;
 }
 
 /* ==========================================================================
