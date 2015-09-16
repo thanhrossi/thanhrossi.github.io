@@ -290,6 +290,32 @@ screen and (max-width: 480px) {
         color: #444;
     }
 }
+/*Me*/
+.me {
+    float: right;
+    padding-left: 15px;
+    text-align: center;
+}
+.me img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.me h4{
+    color: #fff;
+}
+@media print,
+screen and (max-width: 720px) {
+    .me {
+        float: none;
+    }
+    .me img {
+        margin: 5px auto;
+    }
+}
 /*Portfoilo css*/
 .portfolio {
     padding: 0;
