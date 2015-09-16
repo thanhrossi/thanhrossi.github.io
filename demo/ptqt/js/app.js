@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$(document).foundation();
 	// preload
 	$(window).load(function() {
-	    $('#loader-wrapper').fadeOut();
+	    $('.preload').fadeOut();
 
 	});
 	// TinyNav.js 1
