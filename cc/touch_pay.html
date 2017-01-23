@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/touch.css">
+    <script type="text/javascript" src="../js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../js/touch/touch.js"></script>
+    <title>Touch Nemo - Thanh toán giỏ hàng</title>
+</head>
+
+<body class="bg-white">
+    <div class="overlay"></div>
+    <div class="container-page bg-white">
+        <div class="header">
+            <div class="row ta-c">
+                <a href="javascript: void(0)" class="header__back" rel="nofollow"><i class="icon iPrev"></i></a>
+                <span class="header__title fs-18 fw-rb fc-black4">Thanh toán giỏ hàng</span>
+                <a href="javascript: void(0)" class="header__submenu" rel="nofollow">
+                    <i class="icon iMenu2"></i>
+                </a>
+                <div class="row">
+                    <ul class="rs ta-c header__dropdown">
+                        <li>
+                            <a href="#" class="active">
+                                <i class="icon iHomew"></i>
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iSearchw"></i>
+                                <span>Tìm kiếm</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iCartw"></i>
+                                <span>Giỏ hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iVieww"></i>
+                                <span>Yêu thích</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iUserw"></i>
+                                <span>Tài khoản</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pay-cart-wrap">
+            <div class="pay__nav">
+                <ul class="rs clearfix ta-c fs-12">
+                    <li class="active">
+                        <a href="#">
+                            <span class="pay__nav__num fw-b">1</span>
+                            <span class="pay__nav__txt">Địa chỉ giao hàng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="pay__nav__num fw-b">2</span>
+                            <span class="pay__nav__txt">Hình thức thanh toán</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pay__content">
+                <div class="row">
+                    <div class="pay__content__title fw-rbi fs-14 fc-gray6">Chọn địa chỉ giao hàng:</div>
+                    <ul class="rs pay__addr">
+                        <li>
+                            <input type="radio" name="pay__addr" id="addr1" checked>
+                            <label for="addr1">
+                                <div class="fs-12 fc-black3 addr_name">Hoàng Diệu Linh</div>
+                                <div class="fs-11 fc-gray6 addr_phone">Điện thoại: 090303030</div>
+                                <div class="fs-11 fc-gray6 addr_detail">Địa chỉ: Số 7, ngõ 3 Quan Nhân, HN</div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="pay__addr" id="addr2">
+                            <label for="addr2">
+                                <div class="fs-12 fc-black3 addr_name">Hoàng Diệu Linh</div>
+                                <div class="fs-11 fc-gray6 addr_phone">Điện thoại: 090303030</div>
+                                <div class="fs-11 fc-gray6 addr_detail">Địa chỉ: Số 7, ngõ 3 Quan Nhân, HN</div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="pay__addr" id="addr3">
+                            <label for="addr3">
+                                <div class="fs-12 fc-black3 addr_name">Thêm địa chỉ giao hàng mới</div>
+                                
+                            </label>
+                        </li>
+                    </ul>
+                   <div class="pay-cart__submit ta-c">
+                        <a href="#" class="fc-white fw-rbm fs-17">Thanh toán <i class="icon iAction2"></i></a>
+                      
+                   </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+<script>
+$(document).ready(function() {
+    
+});
+</script>
+
+</html>

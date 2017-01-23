@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/touch.css">
+    <script type="text/javascript" src="../js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../js/touch/touch.js"></script>
+    <title>Touch Nemo - edit pro5</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="container-page">
+        <div class="header">
+            <div class="row ta-c">
+                <a href="javascript: void(0)" class="header__back" rel="nofollow"><i class="icon iPrev"></i></a>
+                <span class="header__title fs-18 fw-rb fc-black4">Sửa thông tin cá nhân</span>
+                
+                <div class="row">
+                    <ul class="rs ta-c header__dropdown">
+                        <li>
+                            <a href="#" class="active">
+                                <i class="icon iHomew"></i>
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iSearchw"></i>
+                                <span>Tìm kiếm</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iCartw"></i>
+                                <span>Giỏ hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iVieww"></i>
+                                <span>Yêu thích</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iUserw"></i>
+                                <span>Tài khoản</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="edit-pro5-wrap bg-white">
+            <div class="row">
+                <ul class="rs edit-pro5-list fs-14">
+                    <li class="clearfix">
+                        <div class="edit__l make-left">Ảnh đại diện</div>
+                        <div class="edit__r make-right">
+                            <div class="edit__img">
+                                <img src="../images/touch/profile_img.png" alt="Avatar">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="edit__l make-left">Họ tên</div>
+                        <div class="edit__r make-right">
+                            Link Haty
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="edit__l make-left">Số điện thoại</div>
+                        <div class="edit__r make-right">
+                            0904040807
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="edit__l make-left">E-mail</div>
+                        <div class="edit__r make-right">
+                            link.haty@yahoo.com
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="edit__l make-left">Giới tính</div>
+                        <div class="edit__r make-right">
+                            Nữ
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+$(document).ready(function() {
+    var checkboxes = $('.hasview-wrap').find(':checkbox');
+    $('#hv_selectall').change(function() {
+        checkboxes.prop('checked', $(this).prop("checked"));
+    });
+
+    checkboxes.change(function() {
+        if (false == $(this).prop("checked")) {
+            $('#hv_selectall').prop('checked', false);
+        }
+        if ($('.hasview-wrap input[type="checkbox"]:checked').length == checkboxes.length) {
+            $('#hv_selectall').prop('checked', true);
+        }
+    });
+
+});
+</script>
+
+</html>

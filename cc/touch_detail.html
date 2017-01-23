@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../css/touch.css">
+    <script type="text/javascript" src="../js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../js/jquery.mobile-events.js"></script>
+    <script type="text/javascript" src="../js/touch/touch.js"></script>
+    <script type="text/javascript" src="../js/touch/detail.js"></script>
+    <title>Touch Detail</title>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="in-detail-page container-page">
+        <div class="header">
+            <div class="row ta-c">
+                <a href="javascript: void(0)" class="header__back" rel="nofollow"><i class="icon iPrev"></i></a>
+                <a href="#" class="header__logo"><img src="../images/touch/logo.png" alt="Logo" style="height: 25px;"></a>
+                <a href="javascript: void(0)" class="header__submenu" rel="nofollow">
+                    <i class="icon iMenu2"></i>
+                </a>
+                <div class="row">
+                    <ul class="rs ta-c header__dropdown">
+                        <li>
+                            <a href="#" class="active">
+                                <i class="icon iHomew"></i>
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iSearchw"></i>
+                                <span>Tìm kiếm</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iCartw"></i>
+                                <span>Giỏ hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iVieww"></i>
+                                <span>Yêu thích</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iUserw"></i>
+                                <span>Tài khoản</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="rs detail__nav fw-rb tt-u ta-c">
+            <li><a href="#sp_section" class="active">Sản phẩm</a></li>
+            <li><a href="#detail_section">Chi tiết </a></li>
+            <li><a href="#cmt_section">Bình luận</a></li>
+        </ul>
+        <div class="detail__contents">
+            <div id="sp_section" class="detail__content active">
+                <div class="mod-slides">
+                    <div class="swiper-container mod-slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                    <img src="../images/touch/detail_slider.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                    <img src="../images/touch/detail_slider.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                    <img src="../images/touch/detail_slider.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                    <img src="../images/touch/detail_slider.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="grp-bottom-content clearfix">
+                        <a href="javascript: void(0)" class="slider__love"></a>
+                        <div class="grp-name-price">
+                            <h3 class="rs deal-name"><a class="deal-name-val fs-15 fw-rb" href="#">Máy cắt rau củ quả làm salad và món tráng miệng Comtool TOM-04</a></h3>
+                            <div class="bottom-info">
+                                <div class="deal-price">
+                                    <span class="sell-val fw-rbm fs-18">149.000đ</span>
+                                    <span class="shop-p-val fw-rb fs-13">180.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod-box mod-box-att mb-10 bg-white clearfix">
+                    <div class="mod-box__att fw-rb  fs-13 fc-black">
+                        <div class="row">Chọn đặc tính</div>
+                    </div>
+                    <div class="row mod-box-row clearfix">
+                        <ul class="rs att-list">
+                            <li class="clearfix">
+                                <div class="make-left fs-12 fw-rbb att_title">Số lượng</div>
+                                <div class="att_quantity_input make-left">
+                                    <button class="att_quantity_decrease"></button>
+                                    <input type="text" value="1" class="att_quantity_val fs-14 fw-rbb fc-gray5 ta-c">
+                                    <button class="att_quantity_increase"></button>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="make-left fs-12 fw-rbb att_title">Màu sắc</div>
+                                <div class="att_multi_radio make-left">
+                                    <div class="multi_radio_item make-left">
+                                        <input type="radio" name="color" value="blue" checked id="radio1">
+                                        <label for="radio1">Xanh</label>
+                                    </div>
+                                    <div class="multi_radio_item make-left">
+                                        <input type="radio" name="color" value="gray" id="radio2">
+                                        <label for="radio2">Nâu</label>
+                                    </div>
+                                    <div class="multi_radio_item make-left">
+                                        <input type="radio" name="color" value="black" id="radio3">
+                                        <label for="radio3">Đen</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="make-left fs-12 fw-rbb att_title">Size</div>
+                                <div class="att_multi_radio make-left">
+                                    <div class="multi_radio_item make-left">
+                                        <input type="radio" name="size" value="blue" checked id="radio4">
+                                        <label for="radio4">XXS</label>
+                                    </div>
+                                    <div class="multi_radio_item make-left">
+                                        <input type="radio" name="size" value="gray" id="radio5">
+                                        <label for="radio5">XS</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mod-box mod-box-special mb-10 bg-white clearfix">
+                    <div class="special_title fw-rb  fs-13 fc-green2">
+                        <div class="row">Đặc biệt</div>
+                    </div>
+                    <div class="row">
+                        <ul class="rs special_list fs-13 fw-rbi fc-gray5">
+                            <li>Tặng 01 bộ dán màn hình chống xước từ tính 3 lớp trị giá 100.000đ</li>
+                            <li>Tặng 01 bút cảm ứng một đầu bi trị giá 100.000đ</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mod-box mod-box-finfo mb-10 bg-white clearfix">
+                    <div class="mod-box__finf fw-rb tt-u  fs-13 fc-black">
+                        <div class="row">Thông tin nổi bật</div>
+                    </div>
+                    <div class="row">
+                        <ul class="rs finfo-list fc-black fs-13">
+                            <li>- MediaPad X2 - Máy tính bảng mỏng nhất của Huawei. Màn hình hiển thị sắc nét gấp nhiều lần các máy tính bảng thông thường.</li>
+                            <li>- Bộ vi xử lý mạnh mẽ: Chipset 64 bit, lõi octa Huawei HiSilicon Kirin 930, hiệu suất xử lý của nó là 2GHz.</li>
+                            <li>- Tính năng chụp ảnh góc rộng (thiết bị này có góc ống kính rộng 22mm), bạn sẽ có được những shot hình chụp phong cảnh ấn tượng cũng như tự sướng với nhiều bạn bè trong cùng một bức ảnh. Máy ảnh có tính năng tự động lấy nét, đây không phải là chức năng phổ biến trên tất cả các máy tính bảng.</li>
+                            <li>- Quay video ở độ phân giải 1080p HD, chất lượng cao nhất mà bất kỳ máy tính bảng nào hiện nay đều muốn sở hữu.</li>
+                            <li>- Thời lượng pin cực lớn 5000mAh.</li>
+                            <li>Màu sắc: vàng Gold.</li>
+                            <li>- Kích thước: 183.5 x 103.9 x 7.2mm. Trọng lượng: 239g.</li>
+                            <li>- Thương hiệu: Huawei.</li>
+                            <li>- Bảo hành: 12 tháng phần mềm, 12 tháng phần cứng, lỗi 1 đổi 1 trong 10 ngày.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mod-box mod-trade-mark mb-10 bg-white clearfix">
+                    <div class="row clearfix">
+                        <div class="make-left trade-mark__img">
+                        </div>
+                        <div class="make-left trade-mark__content">
+                            <div class="fs-15 trade-mark__title">Thương hiệu Sunhouse</div>
+                            <div class="fs-10 fc-gray mb-5">Tổng số 1343 sản phẩm</div>
+                            <a href="#" class="trade-mark__btn fc-gray5 fs-9">Xem thêm các sản phẩm khác</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod-hasview mod-box mt-10 mb-10 bg-white">
+                    <div class="mod-hasview-t row mod-box-row clearfix">
+                        <div class="mod-box__title fw-rb  fs-18 fc-black make-left">Có thể bạn quan tâm</div>
+                        <div class="mod-box__viewall fw-rb fs-11 make-right"><a href="#" class="fc-black2">Xem tất cả <i class="icon iAction"></i></a></div>
+                    </div>
+                    <div class="mod-hasview-m wrap-medium-deals clearfix">
+                        <div class="row">
+                            <div class="vSwiper swiper-container swiper-container-horizontal">
+                                <div class="swiper-wrapper" style="transform: translate3d(-616px, 0px, 0px); transition-duration: 0ms;">
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="5" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide " data-swiper-slide-index="2" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide " data-swiper-slide-index="3" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide " data-swiper-slide-index="4" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="5" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="deal-item sys_deal_item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 144px; margin-right: 10px;">
+                                        <div class="inner-deal">
+                                            <div class="wrap-imgdesc">
+                                                <a href="#" class="img-thumb-deal" rel="nofollow">
+                                                    <img class="img-overlay sys_lazy_load" alt="Buffet trưa tối đặc sắc tại Nhà hàng Sườn No.1" data-original="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg" style="background-image: url(&quot;https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg&quot;); display: block;" src="https://muachungcdn.com/thumb_w/500,80/i:product/151/5/hxtxu/buffet-trua-toi-dac-sac-tai-nha-hang-suon-no-1.jpg">
+                                                </a>
+                                            </div>
+                                            <div class="grp-bottom-content">
+                                                <div class="grp-name-price">
+                                                    <div class="bottom-info">
+                                                        <div class="deal-price">
+                                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mod-hasview-b split2c clearfix">
+                            <div class="row">
+                                <div class="split__item clearfix">
+                                    <div class="split__item-l make-left">
+                                        <a href="#" class="fw-rbl">Hộp cơm đa năng thông minh...</a>
+                                        <div class="deal-price">
+                                            <div class="sell-val fw-rbm">149.000đ</div>
+                                            <div class="shop-p-val fw-rb">180.000đ</div>
+                                        </div>
+                                    </div>
+                                    <div class="split__item-r">
+                                        <img src="../images/touch/small_thum2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="split__item clearfix">
+                                    <div class="split__item-l make-left">
+                                        <a href="#" class="fw-rbl">Đồng hồ nam JULIUS JU1075...</a>
+                                        <div class="deal-price">
+                                            <div class="sell-val fw-rbm">550.000đ</div>
+                                            <div class="shop-p-val fw-rb">885.000đ</div>
+                                        </div>
+                                    </div>
+                                    <div class="split__item-r">
+                                        <img src="../images/touch/small_thum1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="detail_section" class="detail__content mb-10 bg-white">
+                <div class="row">
+                    <ul class="rs tech_detail_nav clearfix fs-12 ta-c">
+                        <li><a href="#tab1" class="active">Thông tin chung</a></li>
+                        <li><a href="#tab2">Thông số KT</a></li>
+                        <li><a href="#tab3">Đổi trả</a></li>
+                    </ul>
+                    <div class="tech_detail_contents">
+                        <div id="tab1" class="tech_detail_content active">
+                            <div class="param fc-gray5 fs-14">
+                                <p>iPhone 7 dường như đã gây sốt ngay từ khi ra mắt bởi những nâng cấp đáng giá về tốc độ xử lý, khả năng chụp ảnh, tính năng chống nước, bụi hiện đại... iPhone 7 đã trở thành ước mơ của rất nhiều người đam mê công nghệ, đặc biệt là với phiên bản dung lượng 32 GB.</p>
+                                <p>Bộ đôi iPhone 7 và 7 Plus thiết kế không khác biệt gì với thế hệ cũ. Tuy nhiên, chúng được cải thiện đáng kể những khía cạnh quan trọng nhất và bạn có thể nhận thấy điều này khi sử dụng máy hằng ngày. Bộ đôi này được trang bị hệ thống camera mới hoàn toàn. Hiệu suất nhanh với chip A10. Thời lượng pin tốt nhất từ trước tới giờ. Điểm nổi bật của iPhone 7 là khả năng chống nước. Với tính năng này giúp iPhone 7 trở thành những chiếc iPhone tuyệt vời nhất từ trước đến nay.</p>
+                                <img src="../images/touch/iphone.png" alt="iPhone">
+                            </div>
+                        </div>
+                        <div id="tab2" class="tech_detail_content">
+                            <div class="param fc-gray5 fs-14">
+                                <p>Bộ đôi 7 dường như đã gây sốt ngay từ khi ra mắt bởi những nâng cấp đáng giá về tốc độ xử lý, khả năng chụp ảnh, tính năng chống nước, bụi hiện đại... iPhone 7 đã trở thành ước mơ của rất nhiều người đam mê công nghệ, đặc biệt là với phiên bản dung lượng 32 GB.</p>
+                                <p>Bộ đôi iPhone 7 và 7 Plus thiết kế không khác biệt gì với thế hệ cũ. Tuy nhiên, chúng được cải thiện đáng kể những khía cạnh quan trọng nhất và bạn có thể nhận thấy điều này khi sử dụng máy hằng ngày. Bộ đôi này được trang bị hệ thống camera mới hoàn toàn. Hiệu suất nhanh với chip A10. Thời lượng pin tốt nhất từ trước tới giờ. Điểm nổi bật của iPhone 7 là khả năng chống nước. Với tính năng này giúp iPhone 7 trở thành những chiếc iPhone tuyệt vời nhất từ trước đến nay.</p>
+                                <img src="../images/touch/iphone.png" alt="iPhone">
+                            </div>
+                        </div>
+                        <div id="tab3" class="tech_detail_content">
+                            <div class="param fc-gray5 fs-14">
+                                <p>Dường như đã gây sốt ngay từ khi ra mắt bởi những nâng cấp đáng giá về tốc độ xử lý, khả năng chụp ảnh, tính năng chống nước, bụi hiện đại... iPhone 7 đã trở thành ước mơ của rất nhiều người đam mê công nghệ, đặc biệt là với phiên bản dung lượng 32 GB.</p>
+                                <p>Bộ đôi iPhone 7 và 7 Plus thiết kế không khác biệt gì với thế hệ cũ. Tuy nhiên, chúng được cải thiện đáng kể những khía cạnh quan trọng nhất và bạn có thể nhận thấy điều này khi sử dụng máy hằng ngày. Bộ đôi này được trang bị hệ thống camera mới hoàn toàn. Hiệu suất nhanh với chip A10. Thời lượng pin tốt nhất từ trước tới giờ. Điểm nổi bật của iPhone 7 là khả năng chống nước. Với tính năng này giúp iPhone 7 trở thành những chiếc iPhone tuyệt vời nhất từ trước đến nay.</p>
+                                <img src="../images/touch/iphone.png" alt="iPhone">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="cmt_section" class="detail__content">
+                <div class="mb-10">
+                    <div class="row">
+                        <div class="cmt_section__title fs-15 fw-rbb fc-blue2">Viết bình luận</div>
+                        <div class="cmt_form fs-12 clearfix">
+                            <input type="text" class="cmt_form__txt make-left" placeholder="Nhập câu hỏi tại đây...">
+                            <div class="cmt_form__submit make-right ">
+                                <input type="submit" class="tt-u fw-rbb" value="Gửi">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white mb-10 cmt_wrap">
+                    <div class="row">
+                        <ul class="rs cmt_comments fc-gray5">
+                            <li class="cmt_comment">
+                                <div class="cmt_name fs-12 fw-rbb fc-blue2">Hoàng Ngọc Trâm <span class="fs-10">-26/12/2016</span></div>
+                                <div class="fs-12">
+                                    Deal này có món shashimi cá hồi ko b ơi, vì thấy đăng ảnh có nhưng trong thực đơn lại ghi là cá ngừ
+                                </div>
+                                <div class="cmt_reply">
+                                    <div class="cmt_name fs-12 fw-rbb fc-blue2"><i class="icon iNemo mr-5"></i>CSKH CS Đỗ Yến</div>
+                                    <div class="cmt_reply_wrap">
+                                        <div class="fs-12">
+                                            Bạn thân mến, Bạn tham khảo theo menu giúp MuaChung bạn à. Set không có shashimi cá hồi bạn ạ!
+                                        </div>
+                                        <div class="cmt_other"><a href="#" class="cmt_reply__link fs-10">Trả lời</a> <span class="fs-10 cmt_reply_time">- 3 tuần trước</span></div>
+                                        <div class="cmt_reply_input">
+                                            <input type="text" placeholder="Viết trả lời...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="cmt_comment">
+                                <div class="cmt_name fs-12 fw-rbb fc-blue2">Hoàng Ngọc Trâm </div>
+                                <div class="fs-12">
+                                    Deal này có món shashimi cá hồi ko b ơi, vì thấy đăng ảnh có nhưng trong thực đơn lại ghi là cá ngừ
+                                </div>
+                                <div class="cmt_reply">
+                                    <div class="cmt_name fs-12 fw-rbb fc-blue2"><i class="icon iNemo mr-5"></i>CSKH CS Đỗ Yến</div>
+                                    <div class="cmt_reply_wrap">
+                                        <div class="fs-12">
+                                            Bạn thân mến, Bạn tham khảo theo menu giúp MuaChung bạn à. Set không có shashimi cá hồi bạn ạ!
+                                        </div>
+                                        <div class="cmt_other"><a href="#" class="cmt_reply__link fs-10">Trả lời</a> <span class="fs-10 cmt_reply_time">- 3 tuần trước</span></div>
+                                        <div class="cmt_reply_input">
+                                            <input type="text" placeholder="Viết trả lời...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="ta-c">
+                            <a href="#" class="cmt_more_btn fs-9 fc-white">Xem thêm bình luận</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-nav">
+            <ul class="rs ta-c">
+                <li>
+                    <a href="#" class="active">
+                        <i class="icon iHome"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+                <!--  <li>
+                    <a href="#">
+                        <i class="icon iSearch"></i>
+                        <span>Tìm kiếm</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="#">
+                        <i class="icon iCart"></i>
+                        <span>Giỏ hàng</span>
+                    </a>
+                </li>
+                <li class="action__nav">
+                    <ul class="rs">
+                        <li>
+                            <a href="#">
+                                Thêm vào giỏ hàng
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tt-u">
+                                Mua ngay <i class="icon iNext"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+
+</html>
