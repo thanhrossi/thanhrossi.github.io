@@ -18,8 +18,11 @@ $(document).ready(function() {
             effect: "fadeIn"
         });
     }
-    
     // End lazyload
+    // dropdown
+    if($(".xxxDropdown").length> 0){
+        $(".xxxDropdown").xxxDropdown();
+    }
 
     // back to top
     $('.container-page').append('<div id="back2top" style="display: none;">Back to Top</div>');
@@ -43,5 +46,20 @@ $(document).ready(function() {
     //     $("body").removeClass('is-overlay');
     //     $('.offcanvas').removeClass('active');
     // });
+
+    // popup
+    if($('.popup-wrap').length > 0 ){
+        var $el = $('.popup-wrap'),
+            popupTrigger = $('.popup__trigger');
+        popupTrigger.on('click', function(e) {
+            e.preventDefault();
+            setTimeout(function () {
+                $el.addClass('active');
+            }, 500);
+        });
+
+        popupTrigger.trigger('click');
+        
+    }
 
 });
