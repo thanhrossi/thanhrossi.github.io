@@ -66,7 +66,17 @@ $(document).ready(function() {
         var $masonry = $('.mod-masonry .bottom-cate__deals').masonry({
             columnWidth: '.grid-deal-sizer',
             itemSelector: '.sys_deal_item',
-            percentPosition: true
+            percentPosition: true,
+            isAnimated: true,
+            animationOptions: {
+                duration: 700,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        $masonry.imagesLoaded().progress( function() {
+          $masonry.masonry('layout');
         });
     }
     
