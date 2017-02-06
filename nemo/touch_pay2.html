@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/touch.css">
+    <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="js/touch/touch.js"></script>
+    <title>Touch Nemo - Thanh toán giỏ hàng 2</title>
+</head>
+
+<body class="bg-white">
+    <div class="overlay"></div>
+    <div class="container-page bg-white">
+        <div class="header">
+            <div class="row ta-c">
+                <a href="javascript: void(0)" class="header__back" rel="nofollow"><i class="icon iPrev"></i></a>
+                <span class="header__title fs-18 fw-rb fc-black4">Thanh toán giỏ hàng</span>
+                <a href="javascript: void(0)" class="header__submenu" rel="nofollow">
+                    <i class="icon iMenu2"></i>
+                </a>
+                <div class="row">
+                    <ul class="rs ta-c header__dropdown">
+                        <li>
+                            <a href="#" class="active">
+                                <i class="icon iHomew"></i>
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iSearchw"></i>
+                                <span>Tìm kiếm</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iCartw"></i>
+                                <span>Giỏ hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iVieww"></i>
+                                <span>Yêu thích</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iUserw"></i>
+                                <span>Tài khoản</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pay-cart-wrap pay-cart-step2">
+            <div class="pay__nav">
+                <ul class="rs clearfix ta-c fs-12">
+                    <li>
+                        <a href="#">
+                            <span class="pay__nav__num fw-b">1</span>
+                            <span class="pay__nav__txt">Địa chỉ giao hàng</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <span class="pay__nav__num fw-b">2</span>
+                            <span class="pay__nav__txt">Hình thức thanh toán</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pay__content">
+                <div class="row">
+                    <ul class="rs pay__addr pay__method">
+                        <li>
+                            <input type="radio" name="pay__method" id="method1" checked>
+                            <label for="method1">
+                                <i class="icon iCod"></i>
+                                <div class="pay__item">
+                                    <div class="fs-13 fc-black5 fw-rbb method_name">Thanh toán sau khi nhận hàng (COD)</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="pay__method" id="method2" >
+                            <label for="method2">
+                                <i class="icon iCard"></i>
+                                <div class="pay__item">
+                                    <div class="fs-13 fc-black5 fw-rbb method_name">Thanh toán online (ATM, Visa/Master)</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="pay__method" id="method4" >
+                            <label for="method4">
+                                <i class="icon iNemoW"></i>
+                                <div class="pay__item">
+                                    <div class="fs-13 fc-black5 fw-rbb method_name">Thanh toán bằng tiền từ ví NEMO</div>
+                                    <div class="pay__item__extra mt-10 fs-11">
+                                        <div class="fw-rbi fc-gray2"><span class="fc-red3">*</span>Do tính bảo mật, vui lòng nhập mật khẩu của bạn</div>
+                                        <div class="pay__method-f clearfix">
+                                            <form action="#">
+                                                <div class="t_input_text make-left fs-10">
+                                                    <input type="text" placeholder="Nhập mật khẩu tại đây...">
+                                                </div>
+                                                <div class="t_input_submit make-left fs-11">
+                                                    <input type="submit" class="fw-rbm fc-white" value="Kiểm tra"> 
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="radio" name="pay__method" id="method5" >
+                            <label for="method5">
+                                <i class="icon iAtm"></i>
+                                <div class="pay__item">
+                                    <div class="fs-13 fc-black5 fw-rbb method_name">Thanh toán chuyển khoản từ cây ATM</div>
+                                </div>
+                            </label>
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+                <div class="order-infos">
+                    <div class="order-infos__title fs-18 ta-c fc-black">Thông tin đơn hàng</div>
+                    <div class="row">
+                        <ul class="rs hasview-list">
+                            <li class="clearfix">
+                                <div class="hv__img make-left">
+                                    <a href="#">
+                                        <img src="images/touch/da-xem-img.png" alt="has view">
+                                    </a>
+                                </div>
+                                <div class="hv__pri">
+                                    <div class="hv__pri__title fs-14 fc-blue">Giỏ quà Tết Thịnh Vượng GQ28 - Lời chúc cho một năm mới...</div>
+                                    <div class="deal-price hv__pri__price">
+                                        <div class="sell-val fw-rbm">149.000đ</div>
+                                        <div class="shop-p-val fw-rb">180.000đ</div>
+                                    </div>
+                                    
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="hv__img make-left">
+                                    <a href="#">
+                                        <img src="images/touch/da-xem-img.png" alt="has view">
+                                    </a>
+                                </div>
+                                <div class="hv__pri">
+                                    <div class="hv__pri__title fs-14 fc-blue">Cân nhà bếp mini</div>
+                                    <div class="deal-price hv__pri__price">
+                                        <div class="sell-val fw-rbm">149.000đ</div>
+                                        <div class="shop-p-val fw-rb">180.000đ</div>
+                                    </div>
+                                    
+                                </div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="hv__img make-left">
+                                    <a href="#">
+                                        <img src="images/touch/da-xem-img.png" alt="has view">
+                                    </a>
+                                </div>
+                                <div class="hv__pri">
+                                    <div class="hv__pri__title fs-14 fc-blue">Giỏ quà Tết Thịnh Vượng GQ28 - Lời chúc cho một năm mới...</div>
+                                    <div class="deal-price hv__pri__price">
+                                        <div class="sell-val fw-rbm">149.000đ</div>
+                                        <div class="shop-p-val fw-rb">180.000đ</div>
+                                    </div>
+                                    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-infos_total">
+                        <div class="row">
+                            <div class="total-wrap">
+                                <ul class="rs total-list fs-15">
+                                    <li class="clearfix">
+                                        <div class="total__txt fc-black make-left">Tạm tính:</div>
+                                        <div class="total__val fc-black make-right">1.899.000đ</div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="total__txt fc-black make-left">Phí vận chuyển:</div>
+                                        <div class="total__val fc-black make-right">15.000đ</div>
+                                    </li>
+                                    <li class="clearfix">
+                                        <div class="total__txt fw-rbi fc-gray8 make-left">Bạn có mã giảm giá?</div>
+                                        <div class="total__val make-right"><a href="#" class="fc-blue3">1.899.000đ</a></div>
+                                    </li>
+                                </ul>
+                                <div class="total__price clearfix">
+                                    <div class="total__price-l make-left fc-black fw-rbb fs-15">Tổng tiền:</div>
+                                    <div class="total__price-l make-right fc-red1 fw-rbb fs-15 ">1.899.000đ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               <div class="pay-cart__submit pay-cart__submit_step2 ta-c">
+                    <a href="#" class="fc-white fw-rbm fs-17">Đặt hàng <i class="icon iAction2"></i></a>
+                  
+               </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+<script>
+$(document).ready(function() {
+    
+});
+</script>
+
+</html>

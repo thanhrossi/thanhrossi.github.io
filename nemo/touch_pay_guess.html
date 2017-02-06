@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/touch.css">
+    <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/touch/touch.js"></script>
+    <title>Touch Nemo - Thanh toán - chưa đăng nhập</title>
+</head>
+
+<body >
+    <div class="overlay"></div>
+    <div class="container-page">
+        <div class="header">
+            <div class="row ta-c">
+                <a href="javascript: void(0)" class="header__back" rel="nofollow"><i class="icon iPrev"></i></a>
+                <span class="header__title fs-18 fw-rb fc-black4">Mua hàng</span>
+                <a href="javascript: void(0)" class="header__submenu" rel="nofollow">
+                    <i class="icon iMenu2"></i>
+                </a>
+                <div class="row">
+                    <ul class="rs ta-c header__dropdown">
+                        <li>
+                            <a href="#" class="active">
+                                <i class="icon iHomew"></i>
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iSearchw"></i>
+                                <span>Tìm kiếm</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iCartw"></i>
+                                <span>Giỏ hàng</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iVieww"></i>
+                                <span>Yêu thích</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="icon iUserw"></i>
+                                <span>Tài khoản</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pay-cart-wrap pay-cart-guess-step1">
+            <div class="pay__nav">
+                <ul class="rs clearfix ta-c fs-12">
+                    <li class="active">
+                        <a href="#">
+                            <span class="pay__nav__num fw-b">1</span>
+                            <span class="pay__nav__txt">Địa chỉ giao hàng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="pay__nav__num fw-b">2</span>
+                            <span class="pay__nav__txt">Hình thức thanh toán</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pay__content">
+                <div class="row">
+                    <ul class="rs pay__addr fs-15 fc-black">
+                        <li class="clearfix">
+                            <div class="pay__label">Tên người nhận</div>
+                            <div class="t_input_text">
+                                <input type="text" placeholder="Nhập tên người nhận...">
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="pay__label">Số điện thoại</div>
+                            <div class="t_input_text">
+                                <input type="text" placeholder="Nhập số điện thoại...">
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="pay__label">Tỉnh/Thành phố</div>
+                            <div class="t_input_select">
+                                <div class="select-city xxxDropdown fs-12 fc-black">
+                                    <div class="show-val">
+                                        <span>Nhập Tỉnh/Thành phố</span>
+                                    </div>
+                                    <select name="amount" id="">
+                                        <option value="1">An Giang</option>
+                                        <option value="2">Bà Rịa - Vũng Tàu</option>
+                                        <option value="3">Bắc Giang</option>
+                                        <option value="4">Bắc Kạn</option>
+                                        <option value="5">Bạc Liêu</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="pay__label">Quận/Huyện</div>
+                            <div class="t_input_select">
+                                <div class="select-city xxxDropdown fs-12 fc-black">
+                                    <div class="show-val">
+                                        <span>Nhập Quận/Huyện...</span>
+                                    </div>
+                                    <select name="amount" id="">
+                                        <option value="1">An Giang</option>
+                                        <option value="2">Bà Rịa - Vũng Tàu</option>
+                                        <option value="3">Bắc Giang</option>
+                                        <option value="4">Bắc Kạn</option>
+                                        <option value="5">Bạc Liêu</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="pay__label">Tên đường</div>
+                            <div class="t_input_text">
+                                <input type="text" placeholder="Nhập tên đường...">
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="pay__label">Ghi chú</div>
+                            <div class="t_input_textarea">
+                                <textarea placeholder="Viết ghi chú..." name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                   <div class="pay-cart__submit ta-c">
+                        <a href="#" class="fc-white fw-rbm fs-17">Đặt hàng <i class="icon iAction2"></i></a>
+                      
+                   </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+<script>
+$(document).ready(function() {
+    
+});
+</script>
+
+</html>
