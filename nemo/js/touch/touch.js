@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var toggleMenu = $(".header__submenu");
+    var toggleMenu = $(".header__submenu");
     toggleMenu.on('click', function(e) {
         e.preventDefault();
         $(".header__dropdown").fadeToggle('fast');
@@ -49,16 +49,20 @@ $(document).ready(function() {
 
     // popup
     if($('.popup-wrap').length > 0 ){
-        var $el = $('.popup-wrap'),
-            popupTrigger = $('.popup__trigger');
-        popupTrigger.on('click', function(e) {
-            e.preventDefault();
-            setTimeout(function () {
-                $el.addClass('active');
-            }, 500);
-        });
+        var $el = $('.popup-wrap');
+            // popupTrigger = $('.popup__trigger');
+        // popupTrigger.on('click', function(e) {
+        //     e.preventDefault();
+        //     setTimeout(function () {
+        //         $el.addClass('active');
+        //     }, 500);
+        // });
 
-        popupTrigger.trigger('click');
+        // popupTrigger.trigger('click');
+        
+        $el.addClass("active").delay(1000).queue(function(){
+            $(this).removeClass("active").dequeue();
+        });
         
     }
 
