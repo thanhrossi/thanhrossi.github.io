@@ -4,7 +4,6 @@
 * {
     box-sizing: border-box;
 }
-
 .clearfix:after {
     clear: both;
     content: ".";
@@ -12,10 +11,10 @@
     font-size: 0;
     height: 0;
     line-height: 0;
-    visibility: hidden
+    visibility: hidden 
 }
 .clearfix {
-    zoom:1
+    zoom:1 
 }
 .ta-c {
     text-align: center;
@@ -28,30 +27,6 @@
 }
 .tt-u {
     text-transform: uppercase;
-}
-.fs-14 {
-    font-size: 14px;
-}
-.fs-16 {
-    font-size: 16px;
-}
-.fs-18 {
-    font-size: 18px;
-}
-.fs-24 {
-    font-size: 24px;
-}
-.fs-26 {
-    font-size: 26px;
-}
-.fs-30 {
-    font-size: 30px;
-}
-.fs-36 {
-    font-size: 36px;
-}
-.fs-60 {
-    font-size: 60px;
 }
 .rs {
     margin: 0;
@@ -148,7 +123,32 @@
     background-image: url('../images/icons/facebook.png');
     margin-left: 11px;
 }
-/* font face */
+/* fonts */
+.fs-14 {
+    font-size: 14px;
+}
+.fs-16 {
+    font-size: 16px;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-24 {
+    font-size: 24px;
+}
+.fs-26 {
+    font-size: 26px;
+}
+.fs-30 {
+    font-size: 30px;
+}
+.fs-36 {
+    font-size: 36px;
+}
+.fs-60 {
+    font-size: 60px;
+}
+
 .fc-white {
     color: #fff;
 }
@@ -198,7 +198,6 @@
     font-weight: 400;
 }
 
-
 body {
     background: #fff;
     font-family: Arial, Helvetica, sans-serif;
@@ -207,7 +206,7 @@ body {
     width: 1192px;
     margin: 0 auto;
 }
-
+/* header */
 header {
     background: #fff;
     padding: 20px 0 12px;
@@ -224,6 +223,8 @@ header nav a {
 header nav a.active, header nav a:hover {
     color: #006633;
 }
+/* end header */
+
 /* section feature */
 section.feature {
     background: #188c48 url('../images/banner.jpg') no-repeat center center;
@@ -256,7 +257,6 @@ section.feature .btn {
     bottom: -28px;
     right: -75px;
 }
-
 .section-reasons-content{
     height: 570px;
     background:transparent url('../images/banner_reasons.png') no-repeat center center;
@@ -265,7 +265,6 @@ section.feature .btn {
     padding: 40px 0 47px;
 }
 .reason-list {
-    /* font-weight: bold; */
     width: 562px;
     margin: 53px 0 0 47px;
 }
@@ -277,7 +276,7 @@ section.feature .btn {
     height: 177px;
     border: 3px solid #c4d0d2;
     border-radius: 50%;
-    padding: 24px  0 0;
+    padding: 24px 0 0;
     margin-bottom: 34px;
 }
 .reason-item > .icon {
@@ -304,26 +303,52 @@ section.feature .btn {
 .form-row367 {
     width: 367px;
 }
-.form-row367 input,
-.form-row367 select{
+.form-row367 input, .form-row367 select{
     height: 37px;
     width: 100%;
     border: 1px solid #ccc;
     padding: 0 10px;
 }
-.form-row367 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.select2-container--default .select2-selection--single {
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    height: 37px;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+    line-height: 37px;
+}
+.select2-selection__placeholder {
+    font-style: italic;
+    color: #666 !important;
+    padding: 0 3px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-width: 9px 10px 0 10px;
+    margin-left: -26px;
+    margin-top: 0px;
+    border-top-color: #cdcdcd;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-width: 0 10px 9px 10px;
+    border-bottom-color: #cdcdcd;
+}
+.form-row367 input::-webkit-input-placeholder {
+   /* Chrome/Opera/Safari */
     font-style: italic;
     color: #666;
 }
-.form-row367 input::-moz-placeholder { /* Firefox 19+ */
+.form-row367 input::-moz-placeholder {
+   /* Firefox 19+ */
     font-style: italic;
     color: #666;
 }
-.form-row367 input:-ms-input-placeholder { /* IE 10+ */
+.form-row367 input:-ms-input-placeholder {
+   /* IE 10+ */
     font-style: italic;
     color: #666;
 }
-.form-row367 input:-moz-placeholder { /* Firefox 18- */
+.form-row367 input:-moz-placeholder {
+   /* Firefox 18- */
     font-style: italic;
     color: #666;
 }
@@ -356,8 +381,7 @@ section.feature .btn {
     padding-left: 19px;
     cursor: pointer;
 }
-.radio-list label:before,
-.radio-list label:after {
+.radio-list label:before, .radio-list label:after {
     content: "";
     display: block;
     position: absolute;
@@ -387,7 +411,7 @@ section.feature .btn {
     opacity: 1;
     visibility: visible;
 }
-.section-notice-wrap  {
+.section-notice-wrap {
     padding: 27px 0 41px;
 }
 .section-notice {
@@ -402,12 +426,10 @@ section.feature .btn {
     line-height: 34px;
     transform: translateX(-4px);
 }
-
 /* section-number */
 .section-number {
-
 }
-.section-number .section-notice-wrap  {
+.section-number .section-notice-wrap {
     padding: 66px 0 19px;
 }
 .section-number .section-notice {
@@ -442,7 +464,7 @@ section.feature .btn {
     padding: 21px 0 20px;
     margin-left: -19px;
 }
-.number-list-content  {
+.number-list-content {
     font-family: Arial, Helvetica, sans-serif;
     height: 60px;
     line-height: 20px;
@@ -451,7 +473,8 @@ section.feature .btn {
     font-weight: bold;
 }
 .number-des {
-    /* height: 60px; */
+   /* height: 60px;
+    */
 }
 .section-number-content{
     height: 646px;
@@ -462,12 +485,10 @@ section.feature .btn {
 .section-number .section-notice{
     width: 766px;
 }
-.section-number .notice-heading-pri,
-.section-gallery .notice-heading-pri{
+.section-number .notice-heading-pri, .section-gallery .notice-heading-pri{
     font-size: 17.48px;
 }
-.section-number .notice-heading-sub,
-.section-gallery .notice-heading-sub {
+.section-number .notice-heading-sub, .section-gallery .notice-heading-sub {
     font-size: 26.08px;
 }
 /* section gallery */
@@ -503,8 +524,7 @@ section.feature .btn {
     margin-top: 18px;
 }
 .section-gallery .section-notice-wrap {
-    
-padding: 45px 0 42px;
+    padding: 45px 0 42px;
 }
 .section-gallery .section-notice {
     width: 750px;
@@ -561,6 +581,7 @@ padding: 45px 0 42px;
 .progess-lists li:last-child .progess-item-des {
     background: #007dc5;
 }
+
 /* footer */
 footer {
     background: #67c141;
@@ -577,7 +598,7 @@ footer {
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     padding-bottom: 9px;
 }
-.fList  {
+.fList {
     line-height: 30px;
 }
 .fList a {
@@ -588,3 +609,4 @@ footer {
     display: inline-block;
     margin-right: 9px;
 }
+/* end footer */

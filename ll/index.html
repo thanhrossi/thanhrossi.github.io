@@ -7,6 +7,7 @@
     <title>LL</title>
     <link href="https://fonts.googleapis.com/css?family=Baloo|Lobster|Roboto+Condensed|Roboto+Slab:400,700|Roboto:500,700&amp;subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,7 +24,7 @@
     <main>
         <section class="feature">
             <div class="container">
-                <button class="btn fw-rbm tt-u fc-white wow slideInLeft">Đăng ký miễn phí ngay!</button>
+                <button class="btn fw-rbm tt-u fc-white wow slideInLeft" id="reg-btn">Đăng ký miễn phí ngay!</button>
                 <a href="#"><img src="images/monster.png" alt="Thông báo" class="monster-sticker wow bounceInUp"></a>
             </div>
         </section>
@@ -90,12 +91,13 @@
                                 <input type="text" placeholder="Số điện thoại cha/mẹ" required>
                             </div>
                             <div class="form-row form-row367">
-                                <select name="" id="">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                <select name="" id="your-address">
+                                    <option></option>
+                                    <option value="1">Ba Đình</option>
+                                    <option value="2">Thanh Xuân</option>
+                                    <option value="3">Hà Đông</option>
+                                    <option value="4">Đống Đa</option>
+                                    <option value="5">Cầu Giấy</option>
                                 </select>
                             </div>
                             <div class="form-row form-row-radio fc-black">
@@ -384,6 +386,8 @@
         </div>
     </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script src="js/main.js"></script>
 

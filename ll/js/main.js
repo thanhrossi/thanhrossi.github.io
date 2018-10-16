@@ -13,3 +13,22 @@ var wow = new WOW(
     }
 );
 wow.init();
+
+$(document).ready(function(){
+    var reg_btn = $("#reg-btn"),
+        jump_To = $('.section-reasons-content').offset().top;
+
+    reg_btn.on('click', function(){
+        $('body,html').animate({
+            scrollTop : jump_To
+        }, 500);
+    });
+
+    if($("#your-address").length > 0){
+        $("#your-address").select2({
+            placeholder: "Khu vực gia đình đang sống",
+            minimumResultsForSearch: -1
+        });
+    }
+    
+});
