@@ -99,9 +99,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         jQuery('.giai_toan9_btn').each(function(){
             var href,source, medium,result;	
             href= new URL(jQuery(this).closest('a').attr('href'));
+			
             source = href.searchParams.get("utm_source");
-                medium = href.searchParams.get("utm_medium");
-            result = source+'/'+medium;
+            medium = href.searchParams.get("utm_medium");
+            if(source!==null || medium!==null) {
+                result = source+'/'+medium;
+            }else {
+                result = '';
+            }
             jQuery(this).attr("data-utm",result );
         });
     });
