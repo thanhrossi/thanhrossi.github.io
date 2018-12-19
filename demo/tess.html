@@ -73,10 +73,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div id="AkZmNFM2zsNZ6aerHfWxeJbqUBMrLX9X" class="widget widget-text"><p><span style="font-weight: bold; color: rgb(250, 245, 245);">Tải</span><span style="color: rgb(250, 245, 245); font-weight: bold;"> app liền tay ra ngay đáp án</span></p><a href="https://editor.landingi.com/d00c5161dd9b09ed199f#" class="ui-resizable-handle ui-resizable-e " data-resizable-handle="e"></a><p><span style="font-weight: bold; color: rgb(250, 245, 245);"><br></span></p></div>
             
             <a href="#" target="_blank">
-                <img id="us12vy1KyqBfMmtJGgaWNxeERnuVUkvc"  width="121" height="47"  class="widget widget-image giai_toan9_ios" data-original="https://images.assets-landingi.com/6xRca3fd/appstore.png" src="https://images.assets-landingi.com/FzcJC5xwX8uxvDpi/appstore.png" srcset="https://images.assets-landingi.com/FzcJC5xwX8uxvDpi/appstore.png 1x, https://images.assets-landingi.com/6xRca3fd/appstore.png 2x"  alt="" >
+                <img id="us12vy1KyqBfMmtJGgaWNxeERnuVUkvc"  width="121" height="47"  class="widget widget-image giai_toan9_btn giai_toan9_ios" data-original="https://images.assets-landingi.com/6xRca3fd/appstore.png" src="https://images.assets-landingi.com/FzcJC5xwX8uxvDpi/appstore.png" srcset="https://images.assets-landingi.com/FzcJC5xwX8uxvDpi/appstore.png 1x, https://images.assets-landingi.com/6xRca3fd/appstore.png 2x"  alt="" >
             </a>
             <a href="https://play.google.com/store/apps/details?id=vn.searchApp.gt9&utm_source=hoa&utm_medium=gathanh" target="_blank">
-                <img id="vXtloz8Qe0sQc9d6qJQcIfQDNPz5G6RO"   width="140" height="141"  class="widget widget-image giai_toan9_android" data-original="https://images.assets-landingi.com/ocVetbc8/md_5b0943670e52c.png" src="https://images.assets-landingi.com/13n49cGFzjQs19Vc/md_5b0943670e52c.png" srcset="https://images.assets-landingi.com/13n49cGFzjQs19Vc/md_5b0943670e52c.png 1x, https://images.assets-landingi.com/ocVetbc8/md_5b0943670e52c.png 2x"  alt="" >
+                <img id="vXtloz8Qe0sQc9d6qJQcIfQDNPz5G6RO"   width="140" height="141"  class="widget widget-image giai_toan9_btn giai_toan9_android" data-original="https://images.assets-landingi.com/ocVetbc8/md_5b0943670e52c.png" src="https://images.assets-landingi.com/13n49cGFzjQs19Vc/md_5b0943670e52c.png" srcset="https://images.assets-landingi.com/13n49cGFzjQs19Vc/md_5b0943670e52c.png 1x, https://images.assets-landingi.com/ocVetbc8/md_5b0943670e52c.png 2x"  alt="" >
             </a>
             
             <img id="Ltl7JyC1SkdxkFAPBRLF1aZCQ4OO6HSv"  width="203" height="369"  class="widget widget-image" data-original="https://images.assets-landingi.com/3Ha1a70d/48268846_578719082568056_5676561419315707904_n.jpg" src="https://images.assets-landingi.com/Zelx3nh3TKnLnwBp/48268846_578719082568056_5676561419315707904_n.jpg" srcset="https://images.assets-landingi.com/Zelx3nh3TKnLnwBp/48268846_578719082568056_5676561419315707904_n.jpg 1x, https://images.assets-landingi.com/3Ha1a70d/48268846_578719082568056_5676561419315707904_n.jpg 2x"  alt="" >
@@ -94,3 +94,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script type="text/javascript" src="https://old.assets-landingi.com/bootstrap/js/landend.bootstrap.min.js"></script><script type="text/javascript" src="https://old.assets-landingi.com/bootstrap/js/bootbox.min.js"></script><script type="text/javascript" src="https://old.assets-landingi.com/js/landing.js"></script><script type="text/javascript" src="https://old.assets-landingi.com/assets/js/dist/landend/3285/landend.js"></script><script type="text/javascript" src="https://old.assets-landingi.com/assets/js/landend/anchors/v02.js"></script><script type='text/javascript' src='https://old.assets-landingi.com/assets/js/vendor/jquery-form/jquery.form.min.js'></script>
 <script type="text/javascript" src="https://old.assets-landingi.com/assets/js/landend/140618-2/landend.js"></script>
 <script type="text/javascript" src="https://old.assets-landingi.com/assets/js/landend/180918/validation.js"></script><script>$(function(){$("body").append('<img src="https://analytics.landingi.com/track/500492" alt="" style="display:none;">');});</script><script src="https://scripts.assets-landingi.com/video-bg/v0.5/videoBackground.js"></script></body></html>
+<script>
+    jQuery(document).ready(function(){
+        jQuery('.giai_toan9_btn').each(function(){
+            var href,source, medium,result;	
+            href= new URL(jQuery(this).closest('a').attr('href'));
+            source = href.searchParams.get("utm_source");
+                medium = href.searchParams.get("utm_medium");
+            result = source+'/'+medium;
+            jQuery(this).attr("data-utm",result );
+        });
+    });
+</script>
