@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Math Input</title>
+    <link rel="stylesheet" href="mathquill/mathquill.css">
+    <link rel="stylesheet" href="lib/katex/katex.css">
+    <link rel="stylesheet" href="build/math-input.css">
+    <!-- <script type="text/javascript" src="lib/sketchable.full.min.js"></script> -->
+    <style>
+        body {
+            margin: 0;
+            background: #eee;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <style>
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+         .button:hover {
+            background-color: green;
+        }
+        .mq-editable-field.mq-math-mode{
+            /* overflow: auto !important;*/
+            min-height: 130px !important; 
+            border: none !important;
+            padding: 15px !important;
+            border-radius: 3px !important;
+        }
+        .mq-root-block.mq-hasCursor{
+            overflow: auto !important;
+        }
+        .mpaginator > span {
+            padding: 10px 6px !important;
+            color: transparent !important;
+            background-image: url(./img/cal.png);
+            background-size: 28px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .mpaginator-wrap {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            transform: translateX(-12px);
+            margin: 1px auto 0;
+        }
+        .mpaginator0 > span{
+            
+        }
+        .mpaginator1 > span {
+            background-image: url(./img/square.png) !important;
+        }
+        .mpaginator2 > span {
+
+        }
+        .mpaginator3 > span {
+            background-image: url(./img/abc.png) !important;
+        }
+        .mpaginator4 > span {
+            
+        }
+    </style>
+</head>
+<body>
+<!-- 
+
+    index.html?keypad_type=expression&jump_out_type=dynamic&echo_animation=fade_only&icon_style=fancy&hold_interval_ms=250
+    后边的参数决定键盘样式，可以在http://khan.github.io/math-input/custom.html去设置
+
+ -->
+<script type="text/javascript">
+    var realAnswer = '';
+    var iptHeight = 0;
+    // 确认按钮点击将latex传给Native
+    function sendAnswer(answer) {
+        var allStr = localStorage.getItem('toLatex');
+        console.log('answer: ' + allStr);
+        document.getElementById("latex_result").value = allStr;
+        console.log(document.getElementById("latex_result").value);
+        try{
+            Android.sendAnswer(allStr);
+        }catch(e){
+            console.log('没有设备');
+        }
+    }
+
+    // 调用手写板
+    function showCanvas() {
+        // Android.Handwrite(); // 安卓定义一个调用native手写板的方法
+        try{
+            Android.Handwrite();
+        }catch(e){
+            console.log('没有设备');
+        }
+    }
+
+    // 显示安卓键盘
+    function showKeyboard(){
+        console.log('show keyboard');
+        try {
+            Android.showKeyboard();
+        }catch(e){
+            console.log('没有设备');
+        }
+    }
+
+    // 输入框内容全部替换的方法
+    function getRealAnswer(realAnswer){
+        initIptHeight();
+        console.log('real answer received: ' + realAnswer);
+        window.appComponent.setState({value:realAnswer});
+        window.inputComponent.mathField.setContent(realAnswer);
+        sumHeight();
+    }
+
+    // 添加字符串到输入框光标处
+    function appendText(text){
+        window.inputComponent.mathField.pressKey(text);
+        console.log("new content: " + window.inputComponent.mathField.getContent());
+        window.appComponent.setState({value:window.inputComponent.mathField.getContent()});
+    }
+
+    // 通知native点击了输入框或者光标
+    function clickBlink() {
+        try {
+            Android.clickBlink();
+        }catch(e){
+            console.log('没有设备');
+        }
+    }
+
+    // 和确认按钮一致的功能
+    function closePaid() {
+        console.log('隐藏webview')
+    }
+
+    // 删除的方法
+    function delContent() {
+        window.inputComponent.mathField.delContent();
+    }
+
+    // 计算输入框高度
+    function sumHeight() {
+        try {
+            if (($('.keypad-input').height() - iptHeight) !== 0) {
+                Android.setWebViewHeight($('.keypad-input').height() - iptHeight);
+            }
+        }catch(e){
+            console.log('没有设备');
+        }
+    }
+    function initIptHeight() {
+        iptHeight = $('.keypad-input').height();
+    }
+
+
+
+</script>
+
+<!-- <button  class="button" type="button" onclick="delContent()">1234565</button> -->
+
+<div id="root"></div>
+<div style="margin: 10px;">
+    <textarea id="latex_result"  readonly style="margin: 10px 10px 40px; width: 91%; display: none;"></textarea>
+</div>
+
+
+<script src="lib/i18n.js"></script>
+<script src="lib/icu-slim.js"></script>
+<script src="lib/katex/katex.js"></script>
+<script src="snode_modules/jquery/dist/jquery.min.js"></script>
+<script src="mathquill/mathquill.js"></script>
+<script src="snode_modules/babel-polyfill/browser.js"></script>
+<script src="build/deps.js"></script>
+<script src="build/app.js"></script>
+
+<!-- <script>
+    MathQuill = MathQuill.getInterface(2);
+    instance = MathQuill.MathField(document.getElementById('example'));
+    console.log(instance.latex());
+</script> -->
+
+</body>
+</html>
