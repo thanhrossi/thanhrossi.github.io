@@ -35,7 +35,7 @@ $(document).ready(function () {
         }
     }
     if(isMobile) {
-        let posMobileForm = $('.form-section-mb').offset().top + $('.form-section-mb').height() - 300;
+        let posMobileForm = $('#form-mb-bottom').offset().top;
         $(window).scroll(function(){
             let windowPos = $(window).scrollTop();
             console.log("posMobileForm", posMobileForm);
