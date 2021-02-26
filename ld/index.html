@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTC - FFM</title>
+    <link rel="stylesheet" href="./css/slick.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    var SERVICE_ID = 'service_fqgulit';
+    var TEMP_ID = 'template_h7cnol8';
+    var USER_ID = 'user_jknRb0D19QKL4Mkv6XBHS';
+       (function(){
+          emailjs.init("service_fqgulit");
+       })();
+    let isMobile = /Mobi/.test(navigator.userAgent);
+    let myForm = isMobile ? '#myForm1': '#myForm';
+       function sendForm(){
+        emailjs.sendForm(SERVICE_ID, TEMP_ID, myForm,USER_ID)
+        .then(function(response) {
+           console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+           console.log('FAILED...', error);
+        });
+       }
+
+       function sendData(){
+           console.log('SERVICE' + SERVICE_ID);
+           var fullName = isMobile ? document.getElementById('fullName1').value : document.getElementById('fullName').value;
+           var phone = isMobile ? document.getElementById('phone1').value : document.getElementById('phone').value;
+           var email = isMobile ? document.getElementById('email1').value : document.getElementById('email').value;
+           var address = isMobile ? document.getElementById('address1').value : document.getElementById('address').value;
+           var field = isMobile ? document.getElementById('field1').value : document.getElementById('field').value;
+           var subject = isMobile ? document.getElementById('subject1').value : document.getElementById('subject').value;
+           var content = isMobile ? document.getElementById('content1').value : document.getElementById('content').value;
+        var templateParams = {
+            fullName: fullName,
+            phone: phone,
+            email: email,
+            address: address,
+            field: field,
+            subject: subject,
+            content: content
+        };
+
+    emailjs.send(SERVICE_ID, TEMP_ID, templateParams, USER_ID)
+        .then(function(response) {
+           console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+           console.log('FAILED...', error);
+        });
+       }
+    </script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/modal.js"></script>
+    <script type="text/javascript" src="./js/custom.js"></script>
+<div class="top-header dflex">
+    <a class="db brands tac" href="#">
+        <img src="./images/logo.svg" alt="logo">
+        <div>
+            <img src="./images/logo-txt.svg" alt="logo txt">
+        </div>
+    </a>
+    <ul class="rs contact-infos dflex">
+        <li class="info-item dflex">
+            <i class="icon iPhone"></i>
+            <div class="info-content">
+                <div class="info-label fc-grey fs-25">
+                    Liên hệ:
+                </div>
+                <div class="info-value fs-32 fwb">
+                    kinhdoanh@hateco.com.vn
+                </div>
+            </div>
+        </li>
+        <li class="info-item dflex">
+            <i class="icon iLocation"></i>
+            <div class="info-content">
+                <div class="info-label fc-grey fs-25">
+                    Địa chỉ:
+                </div>
+                <div class="info-value fs-32 fwb">
+                    Số 1 Huỳnh Tấn Phát, KCN Sài Đồng B
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="top-nav">
+    <button id="menu-toggler" data-class="menu-active" class="hamburger">
+        <span class="hamburger-line hamburger-line-top"></span>
+        <span class="hamburger-line hamburger-line-middle"></span>
+        <span class="hamburger-line hamburger-line-bottom"></span>
+    </button>
+    <div class="nav-container dflex">
+        <a class="db logo-small dflex" href="#">
+            <i class="icon iLogoSmall"></i>
+            <div class="logo-txt">
+                <img src="./images/hateco_fullfill_slogan.svg" alt="fullfill">
+            </div>
+        </a>
+        <ul class="rs nav dflex fwb">
+            <li><a href="#" data-link="section-home">Trang chủ</a></li>
+            <li><a href="#" data-link="section-about">Về chúng tôi</a></li>
+            <li><a href="#" data-link="section-product">Sản phẩm</a></li>
+            <li><a href="#" data-link="section-contact">Liên hệ</a></li>
+        </ul>
+    </div>
+</div>
+    <div class="modal fade" id="myModal" role="dialog" >
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <a href="javscript: void(0)" data-dismiss="modal" class="modal-close">
+                    <i class="icon iClose"></i>
+                </a>
+                <div class="modal-body">
+                    <form action="">
+                    <div id="myForm1" class="form-wrapper form-wrapper-mb fc-white">
+                        <div class="form-title fwb ttu fs-20 tac fc-red">
+                            đăng ký ngay
+                        </div>
+                        <div class="form-item fs-16">
+                            <label for="fullName1" class="form-label">Họ tên*</label>
+                            <input type="text" placeholder="Nhập họ tên" name="fullName" id="fullName1" class="form-val" required>
+                        </div>
+                        <div class="form-item-2col">
+                            <div class="form-item fs-16">
+                                <label for="phone1" class="form-label">Số điện thoại*</label>
+                                <input type="text" placeholder="Nhập số điện thoại" name="phone" id="phone1" class="form-val" required>
+                            </div>
+                            <div class="form-item fs-16">
+                                <label for="email1" class="form-label">Email</label>
+                                <input type="text" placeholder="Nhập Email" name="email" id="email1"  class="form-val">
+                            </div>
+                        </div>
+                        <div class="form-item fs-16">
+                            <label for="address1" class="form-label">Tỉnh thành*</label>
+                            <select name= "province" class="form-val" id="address1" required>
+                                <option value="">--Chọn tỉnh/thành phố--</option>
+                                <option value="Tp.Hà Nội">Tp.Hà Nội
+                                <option value="TP  HCM">TP HCM
+                                <option value="Tp.Hải Phòng">Tp.Hải Phòng
+                                <option value="Tp.Đà Nẵng">Tp.Đà Nẵng
+                                <option value="Tp.Cần Thơ">Tp.Cần Thơ
+                                <option value="An Giang">An Giang
+                                <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu
+                                <option value="Bắc Giang">Bắc Giang
+                                <option value="Bắc Kạn">Bắc Kạn
+                                <option value="Bạc Liêu">Bạc Liêu
+                                <option value="Bắc Ninh">Bắc Ninh
+                                <option value="Bến Tre">Bến Tre
+                                <option value="Bình Định">Bình Định
+                                <option value="Bình Dương">Bình Dương
+                                <option value="Bình Phước">Bình Phước
+                                <option value="Bình Thuận">Bình Thuận
+                                <option value="Bình Thuận">Bình Thuận
+                                <option value="Cà Mau">Cà Mau
+                                <option value="Cao Bằng">Cao Bằng
+                                <option value="Đắk Lắk">Đắk Lắk
+                                <option value="Đắk Nông">Đắk Nông
+                                <option value="Điện Biên">Điện Biên
+                                <option value="Đồng Nai">Đồng Nai
+                                <option value="Đồng Tháp">Đồng Tháp
+                                <option value="Đồng Tháp">Đồng Tháp
+                                <option value="Gia Lai">Gia Lai
+                                <option value="Hà Giang">Hà Giang
+                                <option value="Hà Nam">Hà Nam
+                                <option value="Hà Tĩnh">Hà Tĩnh
+                                <option value="Hải Dương">Hải Dương
+                                <option value="Hậu Giang">Hậu Giang
+                                <option value="Hòa Bình">Hòa Bình
+                                <option value="Hưng Yên">Hưng Yên
+                                <option value="Khánh Hòa">Khánh Hòa
+                                <option value="Kiên Giang">Kiên Giang
+                                <option value="Kon Tum">Kon Tum
+                                <option value="Lai Châu">Lai Châu
+                                <option value="Lâm Đồng">Lâm Đồng
+                                <option value="Lạng Sơn">Lạng Sơn
+                                <option value="Lào Cai">Lào Cai
+                                <option value="Long An">Long An
+                                <option value="Nam Định">Nam Định
+                                <option value="Nghệ An">Nghệ An
+                                <option value="Ninh Bình">Ninh Bình
+                                <option value="Ninh Thuận">Ninh Thuận
+                                <option value="Phú Thọ">Phú Thọ
+                                <option value="Quảng Bình">Quảng Bình
+                                <option value="Quảng Bình">Quảng Bình
+                                <option value="Quảng Ngãi">Quảng Ngãi
+                                <option value="Quảng Ninh">Quảng Ninh
+                                <option value="Quảng Trị">Quảng Trị
+                                <option value="Sóc Trăng">Sóc Trăng
+                                <option value="Sơn La">Sơn La
+                                <option value="Tây Ninh">Tây Ninh
+                                <option value="Thái Bình">Thái Bình
+                                <option value="Thái Nguyên">Thái Nguyên
+                                <option value="Thanh Hóa">Thanh Hóa
+                                <option value="Thừa Thiên Huế">Thừa Thiên Huế
+                                <option value="Tiền Giang">Tiền Giang
+                                <option value="Trà Vinh">Trà Vinh
+                                <option value="Tuyên Quang">Tuyên Quang
+                                <option value="Vĩnh Long">Vĩnh Long
+                                <option value="Vĩnh Phúc">Vĩnh Phúc
+                                <option value="Yên Bái">Yên Bái
+                                <option value="Phú Yên">Phú Yên
+                            </select>
+<!--                            <input type="text" placeholder="Nhập địa chỉ" name="address" id="address1"  class="form-val" required>-->
+
+                        </div>
+                        <div class="form-item fs-16">
+                            <label for="company1" class="form-label">Tên doanh nghiệp</label>
+                            <input type="text" placeholder="Nhập tên doanh nghiệp" name="company" id="company1"  class="form-val" required>
+                        </div>
+                        <div class="form-item fs-16">
+                            <label for="field1" class="form-label">Ngành nghề kinh doanh*</label>
+                            <select name="field" id="field1" class="form-val" required>
+                                <option value="">--Chọn ngành nghề kinh doanh--</option>
+                                <option value="volvo">Điện thoại - Máy tính bảng
+                                </option>
+                                <option value="Điện tử - điện lạnh">Điện tử - điện lạnh</option>
+                                <option value="Phụ kiện - Thiết bị số">Phụ kiện - Thiết bị số</option>
+                                <option value="Laptop - Thiết bị IT">Laptop - Thiết bị IT</option>
+                                <option value="Máy ảnh - Quay phim">Máy ảnh - Quay phim</option>
+                                <option value="Điện gia dụng">Điện gia dụng</option>
+                                <option value="Nhà cửa đời sống">Nhà cửa đời sống</option>
+                                <option value="Hàng tiêu dùng - Thực phẩm">Hàng tiêu dùng - Thực phẩm</option>
+                                <option value="Đồ chơi, mẹ và bé">Đồ chơi, mẹ và bé</option>
+                                <option value="Làm đẹp - Sức khỏe">Làm đẹp - Sức khỏe</option>
+                                <option value="Thời trang - Phụ kiện">Thời trang - Phụ kiện</option>
+                                <option value="Thể thao - Dã ngoại">Thể thao - Dã ngoại</option>
+                                <option value="Xe máy, oto, xe đạp">Xe máy, oto, xe đạp</option>
+                                <option value="Hàng quốc tế">Hàng quốc tế</option>
+                                <option value="Sách, VPP và quà tặng">Sách, VPP và quà tặng</option>
+                                <option value="Voucher - Dịch vụ - Thẻ cào">Voucher - Dịch vụ - Thẻ cào</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-item fs-16">
+                            <label for="content1" class="form-label">Nội dung</label>
+                            <textarea name="content" id="content1" cols="30" rows="10" placeholder="Nhập nội dung"  class="form-val"></textarea>
+
+                        </div>
+                        <div class="tac">
+                            <button class="ttu fwb" onclick="sendData()" type="submit">Gửi</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+<section id="section-home">
+    <div class="form-section-mb">
+        <div class="form-mb-top">
+            <img src="./images/about-1-mb.png" alt="about">
+            <a href="javscript: void(0)" data-toggle="modal" data-target="#myModal" id="reg-btn">
+                <img src="./images/reg_btn.svg" alt="reg-btn">
+            </a>
+        </div>
+        <img src="./images/about-2-mb.png" alt="about 2">
+    </div>
+    <div class="form-slider-wrap">
+        <div class="form-slider">
+            <img src="./images/header-bg.jpg" alt="Slider" class="form-slider-item">
+            <img src="./images/slide1.jpg" alt="Slider" class="form-slider-item">
+        </div>
+        <div class="form-section dflex">
+
+            <form id="myForm" class="form-wrapper fc-white">
+                <div class="form-title fwb ttu fs-40 tac">
+                    đăng ký ngay
+                </div>
+                <div class="form-item fs-16">
+                    <div class="form-label">
+                        Họ tên*
+                    </div>
+                    <div class="form-val">
+                        <input type="text" placeholder="Nhập họ tên" name="fullName" id="fullName" required>
+                    </div>
+                </div>
+                <div class="form-item-2col">
+                    <div class="form-item fs-16">
+                        <div class="form-label">
+                            Số điện thoại*
+                        </div>
+                        <div class="form-val">
+                            <input type="text" placeholder="Nhập số điện thoại" name="phone" id="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-item fs-16">
+                        <div class="form-label">
+                            Email
+                        </div>
+                        <div class="form-val">
+                            <input type="email" placeholder="Nhập Email" name="email" id="email" >
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item fs-16">
+                    <div class="form-label">
+                        Tỉnh thành*
+                    </div>
+                    <select name= "province" class="form-val" id="address" required>
+                        <option value="">--Chọn tỉnh/thành phố--</option>
+                        <option value="Tp.Hà Nội">Tp.Hà Nội
+                        <option value="TP  HCM">TP HCM
+                        <option value="Tp.Hải Phòng">Tp.Hải Phòng
+                        <option value="Tp.Đà Nẵng">Tp.Đà Nẵng
+                        <option value="Tp.Cần Thơ">Tp.Cần Thơ
+                        <option value="An Giang">An Giang
+                        <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu
+                        <option value="Bắc Giang">Bắc Giang
+                        <option value="Bắc Kạn">Bắc Kạn
+                        <option value="Bạc Liêu">Bạc Liêu
+                        <option value="Bắc Ninh">Bắc Ninh
+                        <option value="Bến Tre">Bến Tre
+                        <option value="Bình Định">Bình Định
+                        <option value="Bình Dương">Bình Dương
+                        <option value="Bình Phước">Bình Phước
+                        <option value="Bình Thuận">Bình Thuận
+                        <option value="Bình Thuận">Bình Thuận
+                        <option value="Cà Mau">Cà Mau
+                        <option value="Cao Bằng">Cao Bằng
+                        <option value="Đắk Lắk">Đắk Lắk
+                        <option value="Đắk Nông">Đắk Nông
+                        <option value="Điện Biên">Điện Biên
+                        <option value="Đồng Nai">Đồng Nai
+                        <option value="Đồng Tháp">Đồng Tháp
+                        <option value="Đồng Tháp">Đồng Tháp
+                        <option value="Gia Lai">Gia Lai
+                        <option value="Hà Giang">Hà Giang
+                        <option value="Hà Nam">Hà Nam
+                        <option value="Hà Tĩnh">Hà Tĩnh
+                        <option value="Hải Dương">Hải Dương
+                        <option value="Hậu Giang">Hậu Giang
+                        <option value="Hòa Bình">Hòa Bình
+                        <option value="Hưng Yên">Hưng Yên
+                        <option value="Khánh Hòa">Khánh Hòa
+                        <option value="Kiên Giang">Kiên Giang
+                        <option value="Kon Tum">Kon Tum
+                        <option value="Lai Châu">Lai Châu
+                        <option value="Lâm Đồng">Lâm Đồng
+                        <option value="Lạng Sơn">Lạng Sơn
+                        <option value="Lào Cai">Lào Cai
+                        <option value="Long An">Long An
+                        <option value="Nam Định">Nam Định
+                        <option value="Nghệ An">Nghệ An
+                        <option value="Ninh Bình">Ninh Bình
+                        <option value="Ninh Thuận">Ninh Thuận
+                        <option value="Phú Thọ">Phú Thọ
+                        <option value="Quảng Bình">Quảng Bình
+                        <option value="Quảng Bình">Quảng Bình
+                        <option value="Quảng Ngãi">Quảng Ngãi
+                        <option value="Quảng Ninh">Quảng Ninh
+                        <option value="Quảng Trị">Quảng Trị
+                        <option value="Sóc Trăng">Sóc Trăng
+                        <option value="Sơn La">Sơn La
+                        <option value="Tây Ninh">Tây Ninh
+                        <option value="Thái Bình">Thái Bình
+                        <option value="Thái Nguyên">Thái Nguyên
+                        <option value="Thanh Hóa">Thanh Hóa
+                        <option value="Thừa Thiên Huế">Thừa Thiên Huế
+                        <option value="Tiền Giang">Tiền Giang
+                        <option value="Trà Vinh">Trà Vinh
+                        <option value="Tuyên Quang">Tuyên Quang
+                        <option value="Vĩnh Long">Vĩnh Long
+                        <option value="Vĩnh Phúc">Vĩnh Phúc
+                        <option value="Yên Bái">Yên Bái
+                        <option value="Phú Yên">Phú Yên
+                    </select>
+                </div>
+                <div class="form-item fs-16">
+                    <div class="form-label">Tên doanh nghiệp</div>
+                    <div  class="form-val" >
+                        <input type="text" placeholder="Nhập tên doanh nghiệp" name="company" id="company" required>
+                    </div>
+                </div>
+                <div class="form-item fs-16">
+                    <div class="form-label">
+                        Ngành nghề kinh doanh*
+                    </div>
+                    <select name="field" id="field" class="form-val" required>
+                        <option value="">--Chọn ngành nghề kinh doanh--</option>
+                        <option value="volvo">Điện thoại - Máy tính bảng
+                        </option>
+                        <option value="Điện tử - điện lạnh">Điện tử - điện lạnh</option>
+                        <option value="Phụ kiện - Thiết bị số">Phụ kiện - Thiết bị số</option>
+                        <option value="Laptop - Thiết bị IT">Laptop - Thiết bị IT</option>
+                        <option value="Máy ảnh - Quay phim">Máy ảnh - Quay phim</option>
+                        <option value="Điện gia dụng">Điện gia dụng</option>
+                        <option value="Nhà cửa đời sống">Nhà cửa đời sống</option>
+                        <option value="Hàng tiêu dùng - Thực phẩm">Hàng tiêu dùng - Thực phẩm</option>
+                        <option value="Đồ chơi, mẹ và bé">Đồ chơi, mẹ và bé</option>
+                        <option value="Làm đẹp - Sức khỏe">Làm đẹp - Sức khỏe</option>
+                        <option value="Thời trang - Phụ kiện">Thời trang - Phụ kiện</option>
+                        <option value="Thể thao - Dã ngoại">Thể thao - Dã ngoại</option>
+                        <option value="Xe máy, oto, xe đạp">Xe máy, oto, xe đạp</option>
+                        <option value="Hàng quốc tế">Hàng quốc tế</option>
+                        <option value="Sách, VPP và quà tặng">Sách, VPP và quà tặng</option>
+                        <option value="Voucher - Dịch vụ - Thẻ cào">Voucher - Dịch vụ - Thẻ cào</option>
+                    </select>
+                </div>
+                <div class="form-item fs-16">
+                    <div class="form-label">
+                        Nội dung
+                    </div>
+                    <div class="form-val">
+                        <textarea name="content" id="content" cols="30" rows="10" placeholder="Nhập nội dung"></textarea>
+                    </div>
+                </div>
+                <div class="tac">
+                    <button type="submit" class="ttu fwb" onclick="sendData()">Gửi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</section>
+<section class="about-us" id="section-about">
+    <div class="about-container dgrid">
+        <div class="about-img">
+            <img src="./images/about-us.jpg" alt="about-us">
+        </div>
+        <div class="about-content">
+            <div class="about-title fc-red fwb fs-40 ttu">Về chúng tôi</div>
+            <div class="about-para">
+                <p>Hateco Fulfillment là hệ sinh thái Hậu cần TMĐT xuyên biên giới, bao gồm dịch vụ hậu cần xử lý đơn hàng trong nội địa và thông quan hàng hóa xuất/nhập khẩu.</p>
+                <p>Với tầm nhìn trở thành doanh nghiệp cung cấp dịch vụ Hậu cần Thương mại điện tử tiên phong tại Việt Nam dựa trên nền tảng công nghệ cao, chúng tôi cung cấp các giải pháp cho Khách hàng theo mục tiêu: </p>
+            </div>
+            <ul class="rs about-points">
+                <li><i class="icon iBullet"></i>Dịch vụ chất lượng và trọn gói</li>
+                <li><i class="icon iBullet"></i>Cơ sở hạ tầng đảm bảo</li>
+                <li><i class="icon iBullet"></i>Công nghệ thông minh, tiện ích</li>
+                <li><i class="icon iBullet"></i>Dễ dàng tích hợp</li>
+                <li><i class="icon iBullet"></i>Quản trị thông minh</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="askwhy">
+    <div class="section-label ttu fc-red tac fs-40">TẠI SAO NÊN LỰA CHỌN HATECO FULFILLMENT?</div>
+    <div class="askwhy-container">
+    <ul class="rs askwhy-services dgrid">
+        <li class="tac">
+            <i class="icon iEcoSystem"></i>
+            <div class="service-title fwb fs-20 fc-red2">
+                Hệ sinh thái dịch vụ hậu cần
+                thương mại điện tử toàn diện
+            </div>
+            <div class="service-des">
+                Cung cấp toàn trình dịch vụ hậu cần cho đơn hàng:: từ thông quan xuất nhập khẩu đến xử lý đơn hàng trong kho.
+            </div>
+        </li>
+        <li class="tac">
+            <i class="icon iProcess"></i>
+            <div class="service-title fwb fs-20 fc-red2">
+                Chất lượng dịch vụ vượt trội
+            </div>
+            <div class="service-des">
+                Xử lý đơn hàng chính xác, nhanh, cẩn thận, đảm bảo an toàn hàng hóa. Thời gian xử lý thủ tục thông quan nhanh chóng.
+            </div>
+        </li>
+        <li class="tac">
+            <i class="icon iOperation"></i>
+            <div class="service-title fwb fs-20 fc-red2">
+                Năng lực vận hành vượt trội
+            </div>
+            <div class="service-des">
+                Đáp ứng theo nhu cầu sản lượng linh hoạt, lên tới 50.000 đơn hàng mỗi ngày. Dự kiến 2025 đạt tổng công suất 1 triệu đơn/ngày.
+            </div>
+        </li>
+        <li class="tac">
+            <i class="icon iInfras"></i>
+            <div class="service-title fwb fs-20 fc-red2">
+                Nguồn lực về hạ tầng
+            </div>
+            <div class="service-des">
+                Cập nhật nội dung:
+                Nằm trong trung tâm Logistics Hateco với tổng diện tích 120.000 m2, dễ dàng mở rộng diện tích kho lên tới hàng chục nghìn m2. Kho hàng nằm ở vị trí đắc địa: khu cửa ngõ Long Biên bên cạnh Trung tâm Thương mại Aeon Long Biên, cách trung tâm Hồ Gươm 15 phút di chuyển, tiếp giáp với quốc lộ 5A.
+            </div>
+        </li>
+        <li class="tac">
+            <i class="icon iFee"></i>
+            <div class="service-title fwb fs-20 fc-red2">
+                Tối ưu chi phí và nhân sự vận hành cho doanh nghiệp.
+            </div>
+            <div class="service-des">
+                Hỗ trợ tinh gọn bộ máy hậu cần. Cắt giảm chi phí cố định, rủi ro trong việc quản lý. Hạn chế lãng phí nguồn lực vận hành khi thấp điểm
+            </div>
+        </li>
+        <li class="tac">
+            <i class="icon iOptimize"></i>
+            <div class="service-title fwb fs-20 fc-red2">
+                Doanh nghiệp uy tín với tiềm lực lớn
+            </div>
+            <div class="service-des">
+                Là thành viên tập đoàn Hateco đã có gần 20 năm phát triển trong nhiều lĩnh vực: bất động sản, Logistics, cảng biển,...
+            </div>
+        </li>
+    </ul>
+    </div>
+</section>
+<section class="section-products" id="section-product">
+    <div class="section-product">
+        <div class="container">
+            <div class="section-product-label ttu fc-red tac fs-54 fc-red2 fwb">
+                DỊCH VỤ XỬ LÝ ĐƠN HÀNG
+            </div>
+            <ul class="rs section-product-specs dgrid">
+                <li>
+                    <i class="icon iTick"></i>
+                    <div class="product-spec">Khả năng đáp ứng sản lượng lên tới 50.000 đơn hàng/ngày</div>
+                </li>
+                <li>
+                    <i class="icon iTick"></i>
+                    <div class="product-spec">Đa dạng phương pháp quản lý nhập/xuất và loại kho với từng lô hàng.</div>
+                </li>
+                <li>
+                    <i class="icon iTick"></i>
+                    <div class="product-spec">Phân chia đơn hàng theo từng dịch vụ và hãng vận chuyển.</div>
+                </li>
+            </ul>
+            <ul class="rs product-details dgrid">
+                <li>
+                    <a href="#" class="db">
+                        <img src="./images/product-1z.jpg" alt="product" class="product-detail-img">
+                        <span class="product-detail-des fc-white db fwb">Quản lý hàng hóa an toàn và chính xác theo mã sản xuất, SKU, IMEI</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="db">
+                        <img src="./images/product-2z.jpg" alt="product" class="product-detail-img">
+                        <span class="product-detail-des fc-white db fwb">Tùy chỉnh hình thức nhập xuất: theo hạn sử dụng, trạng thái hàng hóa,...</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="db">
+                        <img src="./images/product-3z.jpg" alt="product" class="product-detail-img">
+                        <span class="product-detail-des fc-white db fwb">Dễ dàng kết nối sàn thương mại điện tử, hệ thống quản lý bán hàng,...</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="db">
+                        <img src="./images/product-4z.jpg" alt="product" class="product-detail-img">
+                        <span class="product-detail-des fc-white db fwb">Ứng dụng công nghệ hiện đại vào xử lý đơn hàng giúp tăng độ chính xác, nhanh chóng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="db">
+                        <img src="./images/product-5z.jpg" alt="product" class="product-detail-img">
+                        <span class="product-detail-des fc-white db fwb">Đa dạng hình thức đóng gói phù hợp từng loại hàng hóa và nhu cầu bao bì.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="db">
+                        <img src="./images/product-6z.jpg" alt="product" class="product-detail-img">
+                        <span class="product-detail-des fc-white db fwb">Tích hợp đồng bộ hãng vận chuyển, theo dõi hành trình đơn hàng</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section-product">
+<!--        <div class="section-product-des section-product-des2 tac fs-24">Trung tâm tập kết-thông quan hàng hóa chuyển phát nhanh</div>-->
+        <div class="container">
+            <div class="section-product-label ttu fc-red tac fs-54 fc-red2 fwb">
+                DỊCH VỤ TẬP KẾT -  THÔNG QUAN HÀNG HÓA CHUYỂN PHÁT NHANH
+            </div>
+            <ul class="rs section-product-specs section-product-specs2 dgrid">
+                <li>
+                    <i class="icon iTick"></i>
+                    <div class="product-spec fs-20">Trung tâm chuyển phát nhanh <span class="fwb fc-red2">5.000m2</span></div>
+                </li>
+                <li>
+                    <i class="icon iTick"></i>
+                    <div class="product-spec fs-20">Luồng hàng hóa xuất - nhập riêng biệt</div>
+                </li>
+                <li>
+                    <i class="icon iTick"></i>
+                    <div class="product-spec fs-20">Khu vực thông quan <span class="fwb fc-red2">2.000m2</span></div>
+                </li>
+                <li>
+                    <i class="icon iTick"></i>
+                    <div class="product-spec fs-20">Trung tâm Logistics rộng hơn <span class="fwb fc-red2">120.000m2</span></div>
+                </li>
+            </ul>
+            <ul class="rs product-details dgrid">
+                <li>
+                    <a href="#" class="db">
+                        <img src="./images/camket1z.jpg" alt="product" class="product-detail-img">
+                        <span class="product-detail-des fc-white db fwb">Thông quan hàng hóa mua TMĐT xuyên biên giới</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="db">
+                        <img src="images/camket2z.jpg" alt="product 2" class="product-detail-img">
+                        <span class="product-detail-des fc-white db fwb">Thủ tục thông quan nhanh chóng và an toàn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="db">
+                        <img src="images/camket3z.jpg" alt="product 3" class="product-detail-img">
+                        <span class="product-detail-des fc-white db fwb">Giao hàng đến tay người mua. Theo dõi trạng thái đơn hàng theo thời gian thực.</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="section-testimonials">
+    <div class="section-label ttu fc-red tac fs-40">TIN DÙNG HATECO FULFILLMENT - TRẢI NGHIỆM KHÁCH HÀNG</div>
+    <div class="container">
+        <ul class="rs testimonials dgrid">
+            <li class="tac">
+                <img src="./images/client1.png" alt="client1" class="tes-client">
+                <div class="tes-title fs-20 fc-red">Chị Hà Trần - Nhà phân phối thực phẩm chức năng</div>
+                <div class="tes-content">“Fulfillment by Hateco giúp tôi không còn phải tự thuê kho, quản lý hàng và quản lý nhân sự vận hành. Tôi tiết kiệm rất nhiều thời gian dành cho việc quản lý.”</div>
+            </li>
+            <li class="tac">
+                <img src="./images/client2.png" alt="client2" class="tes-client">
+                <div class="tes-title fs-20 fc-red">Anh Philip Nguyễn - Doanh nghiệp xuất nhập khẩu</div>
+                <div class="tes-content">“Trước đây tỷ lệ sai sót khi đóng đơn của chúng tôi khá nhiều và khi đóng nhầm cũng khó truy tìm được nhầm lẫn ở đâu. Dịch vụ Fulfillment của Hateco giúp chúng tôi hạn chế được việc này. Chúng tôi giảm được 20% phản ánh về chất lượng đơn kể từ khi dùng dịch vụ của Hateco.” </div>
+            </li>
+            <li class="tac">
+                <img src="./images/client3.png" alt="client3" class="tes-client">
+                <div class="tes-title fs-20 fc-red">Chị Lan Linh - Nhà phân phối nội thất</div>
+                <div class="tes-content">“Chỉ cần dùng dịch Hateco Fulfillment là tôi có thể một mình tự kinh doanh online với số lượng hơn 600 đơn/ngày mà không cần thêm nhân viên nào.”</div>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="section-hateco-group">
+    <div class="container dgrid">
+        <div class="group-img">
+            <img src="./images/about-hateco.jpg" alt="about-hateco-group">
+        </div>
+        <div class="group-content">
+            <div class="group-title fc-white fwb fs-40 ttu">TẬP ĐOÀN HATECO</div>
+            <div class="group-para fc-white">
+                <p>Công ty cổ phần Tập đoàn Hateco (Hateco Group) được thành lập năm 2004. Trải qua quá trình hình thành và phát triển, Hateco Group luôn mong muốn mang đến những sản phẩm, dịch vụ theo tiêu chuẩn quốc tế và những trải nghiệm hữu ích, mới mẻ cho người dùng.
+                </p>
+                <p>Hệ sinh thái Hateco Fulfillment cũng là một sản phẩm như thế. Với tầm nhìn trở thành doanh nghiệp tiên phong trong lính vực hậu cần thương mại điện tử dựa trên nền tảng công nghệ cao. Chúng tôi mong muốn mang tới dịch vụ chất lượng đẳng cấp quốc tế của người Việt Nam cho doanh nghiệp Việt.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="section-contact">
+    <div class="container footer-top dgrid">
+        <div class="footer-nav">
+            <div class="footer-trust tac">
+                <div class="footer-logos">
+                    <a href="#"><i class="icon iLogo"></i></a>
+                    <a href="#"><i class="icon iHateco"></i></a>
+                </div>
+                <ul class="rs footer-social tac dgrid">
+                    <li><a href="#"><i class="icon iFacebook"></i></a></li>
+                    <li><a href="#"><i class="icon iYoutube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-nav footer-nav-company">
+            <div class="footer-nav-label fwb">
+                Công ty TNHH Thương mại Dịch vụ Hateco
+            </div>
+            <div class="footer-member fs-16 fwb fc-black ttu">
+                THÀNH VIÊN TẬP ĐOÀN HATECO
+            </div>
+            <div class="footer-nav-des fs-14">
+                <ul class="rs">
+                    <li><span class="fwb">Địa chỉ: </span>Số 1, Huỳnh Tấn Phát, Khu công nghiệp Sài Đồng B, Thạch Bàn, Long Biên, Hà Nội, Việt Nam</li>
+                    <li><span class="fwb">Số điện thoại:</span> 024 325 95272</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-nav  footer-nav-detail">
+            <div class="footer-nav-label fwb">
+                Thông tin chi tiết
+            </div>
+            <ul class="rs footer-links fs-14">
+                <li><a href="#" data-link="section-home">Trang chủ</a></li>
+                <li><a href="#" data-link="section-about">Về chúng tôi</a></li>
+                <li><a href="#" data-link="section-product">Sản phẩm</a></li>
+                <li><a href="#" data-link="section-contact">Liên hệ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright fc-white tac dflex">Copyright © 2021 Hateco Fulfillment. All Rights Reserved.</div>
+</footer>
+</body>
+</html>

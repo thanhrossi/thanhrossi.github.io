@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Averta';
+    src: url('Averta-Regular.woff2') format('woff2'),
+        url('Averta-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('Averta-Bold.woff2') format('woff2'),
+        url('Averta-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('Averta-ExtraBold.woff2') format('woff2'),
+        url('Averta-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('Averta-Light.woff2') format('woff2'),
+        url('Averta-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
