@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Link with Fallback</title>
+  <script>
+    function openApp() {
+      // Custom URL scheme to open the app
+      const appLink = 'myapp://profile/123';
+
+      // Fallback links to App Store or Play Store
+      const appStoreLink = 'https://apps.apple.com/us/app/your-app-id';
+      const playStoreLink = 'https://play.google.com/store/apps/details?id=com.example.myapp';
+
+      // Timeout before redirecting (adjust timing as needed)
+      const timeout = setTimeout(() => {
+        // Check the user agent to determine the platform
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+          window.location.href = appStoreLink; // Redirect to App Store
+        } else if (/Android/i.test(navigator.userAgent)) {
+          window.location.href = playStoreLink; // Redirect to Google Play
+        } else {
+          // Default to a web version or a landing page if it's not a mobile device
+          window.location.href = 'https://yourwebsite.com';
+        }
+      }, 1500); // 1.5 seconds delay
+
+      // Attempt to open the app
+      window.location.href = appLink;
+
+      // Clear the timeout if the user navigates away (indicating the app opened)
+      window.addEventListener('blur', function() {
+        clearTimeout(timeout);
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Open App with Fallback</h1>
+  <button onclick="openApp()">Open Profile in App</button>
+</body>
+</html>
