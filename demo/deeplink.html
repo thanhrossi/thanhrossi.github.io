@@ -16,30 +16,23 @@
       const appStoreLink = 'https://apps.apple.com/vn/app/vinfast/id1592816336';
       const playStoreLink = 'https://play.google.com/store/apps/details?id=com.vinfast.companion.app';
 
-      // Check the user agent to determine the platform
-      const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-      const isAndroid = /Android/i.test(navigator.userAgent);
-
-      // Timeout before redirecting (adjust timing as needed)
-      const timeout = setTimeout(() => {
-        if (isIOS) {
+       const timeout = setTimeout(() => {
+        // Check the user agent to determine the platform
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
           window.location.href = appStoreLink; // Redirect to App Store
-        } else if (isAndroid) {
+        } else if (/Android/i.test(navigator.userAgent)) {
           window.location.href = playStoreLink; // Redirect to Google Play
         } else {
           // Default to a web version or a landing page if it's not a mobile device
-          window.location.href = 'https://yourwebsite.com';
+          window.location.href = 'https://thanhrossi.github.io/demo/deeplink.html';
         }
       }, 1500); // 1.5 seconds delay
 
-      // Attempt to open the app using an invisible iframe (to avoid Safari error)
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.src = appLink;
-      document.body.appendChild(iframe);
+      // Attempt to open the app
+      window.location.href = appLink;
 
       // Clear the timeout if the user navigates away (indicating the app opened)
-      window.addEventListener('blur', function () {
+      window.addEventListener('blur', function() {
         clearTimeout(timeout);
       });
     }
