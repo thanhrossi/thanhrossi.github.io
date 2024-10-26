@@ -60,6 +60,12 @@
   // This will attempt to open the app associated with the scheme
   window.location.href = deepLinkUrl;
 }
+    function openDeepLink3() {
+  const deepLinkUrl = "capp://"; // replace with your custom scheme URL
+
+  // This will attempt to open the app associated with the scheme
+  location.href = deepLinkUrl;
+}
   </script>
 </head>
 <body>
@@ -74,6 +80,7 @@
    <button onclick="openDeepLink2()">open Deep Link2</button>
   <a href="intent://view#Intent;scheme=myapp;package=com.vinfast.companion.app;end">Open My App</a>
   <a href="intent://#Intent;scheme=myapp;package=com.vinfast.companion.app;end">Open My App1</a>
+  <button onclick="openDeepLink3()">open Deep Link3</button>
 
 </body>
 </html>
