@@ -36,10 +36,28 @@
         clearTimeout(timeout);
       });
     }
+
+    function openDeepLink(url, fallbackUrl) {
+    // Record the current time
+    const start = new Date().getTime();
+
+    // Try to open the deep link
+    window.location = url;
+
+    // After a short delay, check if the user was redirected (i.e., the deep link failed)
+    setTimeout(() => {
+        const end = new Date().getTime();
+        if (end - start < 1500) { // Check if we stayed on the same page
+            // Redirect to fallback URL (e.g., app download page)
+            window.location = fallbackUrl;
+        }
+    }, 1000); // Adjust timeout based on testing
+}
   </script>
 </head>
 <body>
   <h1>Open App with Fallback</h1>
   <button onclick="openApp()">Open Profile in App 1</button>
+  <button onclick="openDeepLink('capp://', 'https://play.google.com/store/apps/details?id=com.vinfast.companion.app')">Open Profile in App 2</button>
 </body>
 </html>
