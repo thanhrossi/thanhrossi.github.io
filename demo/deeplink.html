@@ -47,11 +47,11 @@
     // After a short delay, check if the user was redirected (i.e., the deep link failed)
     setTimeout(() => {
         const end = new Date().getTime();
-        if (end - start < 1500) { // Check if we stayed on the same page
+        if (end - start < 2500) { // Check if we stayed on the same page
             // Redirect to fallback URL (e.g., app download page)
             window.location = fallbackUrl;
         }
-    }, 1000); // Adjust timeout based on testing
+    }, 2000); // Adjust timeout based on testing
 }
   </script>
 </head>
