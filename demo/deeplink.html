@@ -53,6 +53,13 @@
         }
     }, 2000); // Adjust timeout based on testing
 }
+
+    function openDeepLink2() {
+  const deepLinkUrl = "capp://"; // replace with your custom scheme URL
+
+  // This will attempt to open the app associated with the scheme
+  window.location.href = deepLinkUrl;
+}
   </script>
 </head>
 <body>
@@ -63,5 +70,6 @@
   <button onclick="openDeepLink('capp://', 'https://play.google.com/store/apps/details?id=com.vinfast.companion.app')">Open Profile in App android</button><br/>
   <a href="capp://">Open P</a>
   <br/>
+   <button onclick="openDeepLink2()">open Deep Link2</button>
 </body>
 </html>
